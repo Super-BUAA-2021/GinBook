@@ -1,0 +1,38 @@
+name: 'Gitbook Action Build'
+
+on:
+    push:
+        branches:
+            - main    # trigger branch
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [10]
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - name: install_gitbook_plugins
+              run: |
+                  npm install gitbook-cli -g
+                  gitbook -v
+                  gitbook fetch 3.0.0
+                  gitbook install
+            - name: Build Gitbook
+              run: |
+                  gitbook build --gitbook=3.0.0
+            - name: Push to gh-pages
+              run: |
+                  cd ./_book
+                  git init
+                  git config --local user.name "${GITHUB_ACTOR}"
+                  git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+                  git add *
+                  git commit -m "Update by gitbook-action"
+                  git push --force  "https://${GITHUB_ACTOR}:${{ secrets.PERSONAL_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" main:gh-pages
