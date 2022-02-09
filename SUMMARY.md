@@ -1,3 +1,7 @@
 # Table of contents
 
-* [Page 1](README.md)
+* [GinBook](README.md)
+
+## 基础篇
+
+* [环境配置](ji-chu-pian/huan-jing-pei-zhi.md)

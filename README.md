@@ -1,14 +1,10 @@
-# Page 1
+# GinBook
 
 Introduction Gin is a web framework, developed by Go.
 
 #### 章节介绍
 
-因个人（BFlame）只是初学者，学习使用Gin的时候并不系统，因此学习到该[高星项目](https://github.com/flipped-aurora/gin-vue-admin) 后，决定本Ginbook的顺序以该组织推送的教程为基准进行。如下
 
-
-
-#### 章节介绍
 
 因个人（BFlame）只是初学者，学习使用Gin的时候并不系统，因此学习到该[高星项目](https://github.com/flipped-aurora/gin-vue-admin) 后，决定本Ginbook的顺序以该组织推送的教程为基准进行。如下所示
 
@@ -33,4 +29,3 @@ Introduction Gin is a web framework, developed by Go.
 第十章：半小时彻底弄懂Casbin基础模型
 
 第十一章：Casbin的代码使用、api调用、自定义比较方法
-
