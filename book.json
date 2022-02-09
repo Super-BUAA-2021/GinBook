@@ -13,17 +13,35 @@
 		"-lunr", 
 		"-search", 
 		"search-pro",
-		"splitter"
+		"splitter",
+		"code",
+        "-search",
+        "search-pro",
+        "github",
+        "splitter",
+        "-sharing",
+        "sharing-plus",
+        "-highlight",
+        "styles-less",
+        "toggle-chapters",
+        "multipart",
+        "ancre-navigation"
 	],
 	"pluginsConfig": {
 		"editlink": {
 			"base": "https://github.com/Super-BUAA-2021/GinBook/blob/master",
 			"label": "Edit This Page"
 		},	
+		"code": {
+            "copyButtons": true
+        },
+		"github": {
+            "url": "https://github.com/BFlameSwift"
+        },
 		"github-buttons": {
 			"buttons": [{
-				"user": "BFlameSwift",
-				"repo": "ActionTest",
+				"user": "Super-BUAA-2021",
+				"repo": "GinBook",
 				"type": "star",
 				"size": "small"
 			}]
@@ -37,7 +55,12 @@
 		"prism": {
 			"css": ["prismjs/themes/prism-solarizedlight.css"],
 			"lang": {"flow": "typescript"}
-		}
+		},
+        "tbfed-pagefooter": {
+            "copyright": "Copyright © lijiam 2019",
+            "modify_label": "本书发布时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        }
 	},
 	"ignores" : ["_book", "node_modules"]
 }
