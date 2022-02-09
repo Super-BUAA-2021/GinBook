@@ -17,7 +17,7 @@
 	],
 	"pluginsConfig": {
 		"editlink": {
-			"base": "https://github.com/Super-BUAA-2021/GinBook/blob/main",
+			"base": "https://github.com/Super-BUAA-2021/GinBook/blob/master",
 			"label": "Edit This Page"
 		},	
 		"github-buttons": {
