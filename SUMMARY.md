@@ -6,6 +6,7 @@
 
 * [环境配置](post/preparation/huan-jing-pei-zhi.md)
 * [入门教程推荐](post/preparation/ru-men-jiao-cheng-tui-jian.md)
+* [Gin项目大致结构](post/preparation/3.md)
 
 ## 基础篇 <a href="#post/basis" id="post/basis"></a>
 
