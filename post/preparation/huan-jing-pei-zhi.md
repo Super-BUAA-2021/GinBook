@@ -16,17 +16,17 @@
 
     GOROOT是Go的根目录
 
-    ![Untitled](../img/huan-jing-pei-zhi/Untitled-16444104347731.png)
+    <img src="../img/huan-jing-pei-zhi/Untitled.png" alt="Untitled" data-size="original">
 
 并将$GOROOT/bin、$GOPATH/bin添加系统变量PATH：
 
-![Untitled](<../img/huan-jing-pei-zhi/Untitled 1-16444104347742.png>)
+![Untitled](<../img/huan-jing-pei-zhi/Untitled 1.png>)
 
-![Untitled](<../img/huan-jing-pei-zhi/Untitled 2-16444104347743.png>)
+![Untitled](<../img/huan-jing-pei-zhi/Untitled 2.png>)
 
 现在即可以通过 `go version` 查看Go语言版本
 
-![Untitled](<../img/huan-jing-pei-zhi/Untitled 3-16444104347744.png>)
+![Untitled](<../img/huan-jing-pei-zhi/Untitled 3.png>)
 
 ### **推荐设置**
 
@@ -41,11 +41,11 @@
 
     推荐使用vscode主要插件:Go , 使用后可自动删除未使用的import 并处理代码格式
 
-    ![Untitled](<../img/huan-jing-pei-zhi/Untitled 4-16444104347745.png>)
+    <img src="../img/huan-jing-pei-zhi/Untitled 4.png" alt="Untitled" data-size="original">
 
     安装后可使用 `ctrl+shift+P` 输入从而更新包 当然也可以使用 `go get -u all` 来更新Go
 
-![Untitled](<../img/huan-jing-pei-zhi/Untitled 5-16444104347746.png>)
+![Untitled](<../img/huan-jing-pei-zhi/Untitled 5.png>)
 
 ## Hello，world！！
 
@@ -63,7 +63,7 @@ func main() {
 
 使用 `go run main.go` (文件名） 即可运行，注意运行单文件的包名需要是main
 
-![Untitled](<../img/huan-jing-pei-zhi/Untitled 6-16444104347747.png>)
+![Untitled](<../img/huan-jing-pei-zhi/Untitled 6.png>)
 
 好了，你已经会写 `hello, world` 了，那么现在来用Go语言完成本学习的学术分享平台吧！！！（×）
 
@@ -71,7 +71,7 @@ func main() {
 
 主要使用Gin框架，下图是Go开发中主要的项目结构，不过多介绍了
 
-![Untitled](<../img/huan-jing-pei-zhi/Untitled 7-16444104347748.png>)
+![Untitled](<../img/huan-jing-pei-zhi/Untitled 7.png>)
 
 PS 图来自《Go高级编程》 5.7 大型Web项目分层(侵删）
 
