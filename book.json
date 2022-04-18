@@ -2,6 +2,7 @@
 	"title": "Summary",
 	"plugins" : [
 		"expandable-chapters",
+		"chapter-fold",  
 		"github-buttons",
 		"editlink",
 		"copy-code-button",
@@ -18,6 +19,7 @@
         "-search",
         "search-pro",
         "github",
+		"popup",   
         "splitter",
         "-sharing",
         "sharing-plus",
