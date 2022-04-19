@@ -13,3 +13,5 @@
 ## 基础篇 <a href="#post-basis" id="post-basis"></a>
 
 * [第二章 gin的请求以及获取参数的方式](post/basis/gin-de-qing-qiu-yi-ji-huo-qu-can-shu-de-fang-shi.md)
+* [Swagger 介绍](post-basis/swagger-jie-shao.md)
+* [第三章：使用bind绑定参数和参数验证](post-basis/di-san-zhang-shi-yong-bind-bang-ding-can-shu-he-can-shu-yan-zheng.md)
