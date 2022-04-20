@@ -12,7 +12,7 @@ Introduction Gin is a web framework, developed by Go.
 
 ✅ 第二章：gin的get post delete put请求以及获取参数的方式
 
-❌ 第三章：使用bind绑定参数和参数验证
+✅ 第三章：使用bind绑定参数和参数验证
 
 ❌ 第四章：gin对于文件的上传和返回
 
@@ -26,6 +26,3 @@ Introduction Gin is a web framework, developed by Go.
 
 ❌ 第九章：jwt-go详细教学及使用示例
 
-❌ 第十章：半小时彻底弄懂Casbin基础模型
-
-❌ 第十一章：Casbin的代码使用、api调用、自定义比较方法
