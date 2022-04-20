@@ -49,7 +49,63 @@ r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 当然在需要添加swagger的api接口上方添加指定格式的注释。再使用`swag init` 生成文档重新运行即可。
 
-![image-20220420000406612](img/swagger-jie-shao/image-20220420000406612.png)
+下面给出一个API接口代码及其上方的Swagger注释
+
+```go
+// Login
+// @Summary      用户登录
+// @Description  根据用户邮箱和密码等生成token，并将token返回给用户
+// @Tags         登录模块
+// @Accept       json
+// @Produce      json
+// @Param        data  body     model.LoginQ  true  "用户名，密码"
+// @Success      200       {string}  string  "{"success": true, "message": "登录成功", "data": "model.User的所有信息"}"
+// @Router       /api/v1/login [post]
+func Login(c *gin.Context) {
+	// var user model.User
+	// var notFound bool
+	var data model.LoginQ
+	if err := c.ShouldBindJSON(&data); err != nil {
+		panic(err)
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"success": true,
+		"message": "登录成功",
+		"data":    "username:" + data.Username + ",password:" + data.Password,
+	})
+}
+
+```
+
+此处主要解释下Param中的`model.LoginQ`  为前端发送参数的结合体。其内容为，在对参数进行bind验证（下节细说）后，便可直接调用使用了，也初步验证了参数的类型、数量是否合法。
+
+```go
+type LoginQ struct {
+	Username string `json:"username"`
+	Password string `json:"password"`
+}
+```
+
+PS 还有两种常见方式可自行使用,第一种query主要用于前端在url上添加参数使用。后一种FormData主要用于前端传输文件至后端。更多还请参见官方文档
+
+```go
+// @Param        id   query  int     true  "Account ID"
+id := c.Request.URL.Query().Get("id")
+
+// @Param        code     formData  file                        true  "代码文件"
+```
+
+### 效果
+
+
+
+![image-20220420150743106](img/swagger-jie-shao/image-20220420150743106.png)
 
 前端或后端可直接通过此界面来想指定位置发送请求以测试。
 
+![image-20220420150928110](img/swagger-jie-shao/image-20220420150928110.png)
+
+运行请求结果
+
+![image-20220420150812736](img/swagger-jie-shao/image-20220420150812736.png)
