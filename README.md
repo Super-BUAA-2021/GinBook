@@ -14,9 +14,9 @@ Introduction Gin is a web framework, developed by Go.
 
 ✅ 第三章：使用bind绑定参数和参数验证
 
-❌ 第四章：gin对于文件的上传和返回
+✅ 第四章：gin对于文件的上传和返回
 
-❌ 第五章：gin的中间件和路由分组
+✅ 第五章：gin的中间件和路由分组
 
 ❌ 第六章：日志介绍以及工具推荐
 
