@@ -18,7 +18,7 @@ Introduction Gin is a web framework, developed by Go.
 
 ❌ 第六章：日志介绍以及工具推荐
 
-❌ 第七章：初识GROM使用GORM进行数据库操作
+❌ 第七章：初识GORM使用GORM进行数据库操作
 
 ❌ 第八章：jwt-go详细教学及使用示例
 
