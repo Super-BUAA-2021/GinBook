@@ -85,3 +85,4 @@ func LoggerToFile() gin.HandlerFunc {
 
 1. [go-gin-api-document](https://github.com/xinliangnote/Go/blob/master/03-go-gin-api%20%5B%E6%96%87%E6%A1%A3%5D/03-%5Bgo-gin-api%5D%20%E8%B7%AF%E7%94%B1%E4%B8%AD%E9%97%B4%E4%BB%B6%20-%20%E6%97%A5%E5%BF%97%E8%AE%B0%E5%BD%95.md)
 2. https://github.com/xinliangnote/go-gin-api
+3. https://www.yuque.com/xinliangnote/go-gin-api/ngc3x5
