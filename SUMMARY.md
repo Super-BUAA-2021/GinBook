@@ -17,3 +17,6 @@
 * [第三章：使用bind绑定参数和参数验证](post-basis/di-san-zhang-shi-yong-bind-bang-ding-can-shu-he-can-shu-yan-zheng.md)
 * [第四章：gin对于文件的上传和返回](post-basis/p4-upload-file.md)
 * [第五章 路由分组与中间件](post-basis/p5-middleware-router-group.md)
+* [P6 middleware log and Logrus](post-basis/p6-middleware-log-and-logrus.md)
+* [P7 Gorm basic and service](post-basis/p7-gorm-basic-and-service.md)
+* [P8 jwt-go use](post-basis/p8-jwt-go-use.md)
