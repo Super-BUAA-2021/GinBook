@@ -1,2 +1,2 @@
-# P8 jwt-go use
+# 第八章 jwt-go详细教学及使用示例
 

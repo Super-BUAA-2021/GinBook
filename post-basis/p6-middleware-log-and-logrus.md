@@ -1,2 +1,2 @@
-# P6 middleware log and Logrus
+# 第六章 日志介绍以及工具推荐
 
