@@ -66,7 +66,7 @@ func LoggerToFile() gin.HandlerFunc {
 		)
 	}
 }
-// from https://www.mianshigee.com/note/detail/225516exd/
+// https://github.com/xinliangnote/go-gin-api
 ```
 
 为了方便使用者读取我将其改为了json格式，随后访问swagger界面，可在`demo.log`见到如下日志
