@@ -10,3 +10,19 @@
 
 速成的话个人推荐菜鸟教程，随后看《Go程序设计语言》，并结合一些项目实例学习
 
+
+
+# 推荐项目
+
+1. [go-gin-api](https://github.com/xinliangnote/go-gin-api)
+
+2. [gin-vue-admin](https://github.com/flipped-aurora/gin-vue-admin)
+3. [Phoenix-server](https://github.com/phoenix-next/phoenix-server)
+4. [xpertise-go](https://github.com/Coach257/xpertise-go)
+
+
+
+# 博客推荐
+
+1. https://github.com/xinliangnote/Go
+2. https://eddycjy.com/
