@@ -20,3 +20,7 @@
 * [第六章 日志介绍以及工具推荐](post-basis/p6-middleware-log-and-logrus.md)
 * [第七章：初识GROM使用GORM进行数据库操作](post-basis/p7-gorm-basic-and-service.md)
 * [第八章 jwt-go详细教学及使用示例](post-basis/p8-jwt-go-use.md)
+
+## 番外 <a href="#gossip" id="gossip"></a>
+
+* [Pn1-elasticsearch basic guide](gossip/pn1-elasticsearch-basic-guide.md)
