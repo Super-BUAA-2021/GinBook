@@ -22,4 +22,4 @@ Introduction Gin is a web framework, developed by Go.
 
 ✅ 第八章：jwt-go详细教学及使用示例
 
-❌ 第N章：elasticsearch 简单指南，以go为例
+✅ 第N章：elasticsearch 简单指南，以go为例
