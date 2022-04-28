@@ -23,4 +23,4 @@
 
 ## 番外 <a href="#gossip" id="gossip"></a>
 
-* [Pn1-elasticsearch basic guide](gossip/pn1-elasticsearch-basic-guide.md)
+* [第N章：elasticsearch go操作简单指北 ](gossip/pn1-elasticsearch-basic-guide.md)

@@ -1,4 +1,4 @@
-# 第N章：elasticsearch go操作简单介绍
+# 第N章：elasticsearch go操作简单指北
 
 > 本节偏向于杂谈，适用于软院大三后端使用elasticsearch的同学
 
