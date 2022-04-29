@@ -23,9 +23,9 @@
 
 ## 进阶篇 <a href="#post-advanced" id="post-advanced"></a>
 
-* [Exception capture processing](post-advanced/exception-capture-processing.md)
-* [Interface flow limiting control](post-advanced/interface-flow-limiting-control.md)
-* [Unified timeout control](post-advanced/unified-timeout-control.md)
+* [异常捕获处理](post-advanced/exception-capture-processing.md)
+* [接口限流控制](post-advanced/interface-flow-limiting-control.md)
+* [统一超时控制](post-advanced/unified-timeout-control.md)
 
 ## 番外 <a href="#gossip" id="gossip"></a>
 
