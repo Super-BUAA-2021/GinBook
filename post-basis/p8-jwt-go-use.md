@@ -121,6 +121,39 @@ user := utils.SolveUser(c)
 
 
 
+### 简单实践
+
+在router中配置路由，并添加API：`GetUser` ，测试不加token以及使用正确token的返回结果。通过结果可知测试成功
+
+```go
+	// 除了登录模块和静态资源之外，都需要身份认证
+	basicRouter := rawRouter.Group("/")
+	basicRouter.Use(middleware.AuthRequired())
+
+	// 用户模块
+	userRouter := basicRouter.Group("/users")
+	{
+		userRouter.GET("/:id", v1.GetUser)
+	}
+func GetUser(c *gin.Context) {
+	// 获取请求数据
+	id, err := strconv.ParseUint(c.Param("id"), 10, 64)
+	if err != nil {
+		c.JSON(http.StatusOK, response.GetUserA{Success: false, Message: "请求参数非法", Code: 400})
+		return
+	}
+	// 查询对应ID的用户
+	if user, notFound := service.GetUserByID(id); notFound {
+		c.JSON(http.StatusOK, response.GetUserA{Success: false, Message: "找不到对应的用户", Code: 404})
+	} else {
+		// 返回响应
+		c.JSON(http.StatusOK, response.GetUserA{Success: true, Message: "查找成功", Name: user.Name, Code: 200})
+	}
+}
+```
+
+<img src="img/p8-jwt-go-use/image-20220429105409772.png" alt="image-20220429105409772" style="zoom: 37%;" /><img src="img/p8-jwt-go-use/image-20220429105509887.png" alt="image-20220429105509887" style="zoom:33%;" />
+
 
 
 ## 参考
