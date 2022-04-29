@@ -21,6 +21,12 @@
 * [第七章：初识GROM使用GORM进行数据库操作](post-basis/p7-gorm-basic-and-service.md)
 * [第八章 jwt-go详细教学及使用示例](post-basis/p8-jwt-go-use.md)
 
+## 进阶篇 <a href="#post-advanced" id="post-advanced"></a>
+
+* [Exception capture processing](post-advanced/exception-capture-processing.md)
+* [Interface flow limiting control](post-advanced/interface-flow-limiting-control.md)
+* [Unified timeout control](post-advanced/unified-timeout-control.md)
+
 ## 番外 <a href="#gossip" id="gossip"></a>
 
 * [第N章：elasticsearch go操作简单指北](gossip/pn1-elasticsearch-basic-guide.md)
