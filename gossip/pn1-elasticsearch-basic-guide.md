@@ -64,7 +64,7 @@ bulkRequest := client.Bulk()
 
 所谓聚合便是类似知网这样的：
 
-![image-20220428153741182](../gossip/img/pn1-elasticsearch-basic-guide/image-20220428153741182.png)
+![image-20220428153741182](img/pn1-elasticsearch-basic-guide/image-20220428153741182.png)
 
 ### 数据检索
 
