@@ -27,7 +27,7 @@
 * [接口限流控制](post-advanced/interface-flow-limiting-control.md)
 * [统一超时控制](post-advanced/unified-timeout-control.md)
 
-## 番外 <a href="#gossip" id="gossip"></a>
+## 番外 <a href="#post-gossip" id="post-gossip"></a>
 
-* [elasticsearch go操作简单指北](gossip/pn1-elasticsearch-basic-guide.md)
-* [如何移植Gin-demo](gossip/pn2-how-to-transplant-gin-demo.md)
+* [elasticsearch go操作简单指北](post-gossip/pn1-elasticsearch-basic-guide.md)
+* [如何移植Gin-demo](post-gossip/pn2-how-to-transplant-gin-demo.md)
