@@ -81,9 +81,9 @@ imagePath := filepath.Join(rootPath, "resource", "image")
 
 保存成功后，若`resourceRouter` 的路由为`127.0.0.1:8081/api/v1/resource` ，则可通过`127.0.0.1:8081/api/v1/resource/image`+文件名访问到指定文件了。
 
-而后端则可以在返回json中给明特定文件的url即可。
+而后端则可以在返回json中给明特定文件的url即可。下图为我上传了一个`1.pdf` 文件，当访问指定路由url时，IDM提示我下载该文件。
 
-
+![image-20220429085448054](img/p4-upload-file/image-20220429085448054.png)
 
 ## 其他
 
