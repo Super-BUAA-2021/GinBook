@@ -24,4 +24,4 @@
 ## 番外 <a href="#gossip" id="gossip"></a>
 
 * [第N章：elasticsearch go操作简单指北](gossip/pn1-elasticsearch-basic-guide.md)
-* [Pag](gossip/pag.md)
+* [Pn2 how to transplant Gin-demo](gossip/pn2-how-to-transplant-gin-demo.md)
