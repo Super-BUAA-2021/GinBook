@@ -44,3 +44,12 @@ id := c.Param("id")
 只用这种方式大致可以处理绝大多数情况了。下一小节将会介绍通过bind绑定参数来使得一行接收到所有的信息并进行简单验证。但是一次只能接收到一个参数（纯压行也不是一个好办法），还需要额外的对参数进行验证。若只是这么粗暴处理往往会导致api接口函数过于冗长。
 
 ~~否则便可能会像我一样曾经在api接口函数中写下了80行接收并验证参数的蠢事。。~~
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Super-BUAA-2021/GinBook"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
