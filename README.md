@@ -36,13 +36,6 @@
 
 ## 其他
 
-版权归 BFlameSwift 所有。未经授权不得转载。
+  * 版权归 BFlameSwift 所有。未经授权不得转载。
+  * 使用utteranc.es评论插件，需要刷新页面一下方可使用
 
-
-<script src="https://utteranc.es/client.js"
-        repo="Super-BUAA-2021/GinBook"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
