@@ -24,3 +24,14 @@ func main() {
 * 运行信息，本次后端监听了8081端口，而默认设置为8080。
 * 默认Engine实例，此处指Engine实例，表示使用官方的Logger，Recovery中间件来创建实例，后续我们会使用Logrus来作为日志中间件。
 
+
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Super-BUAA-2021/GinBook"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

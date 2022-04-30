@@ -111,3 +111,14 @@ id := c.Request.URL.Query().Get("id")
 运行请求结果
 
 ![image-20220420150812736](img/swagger-jie-shao/image-20220420150812736.png)
+
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Super-BUAA-2021/GinBook"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

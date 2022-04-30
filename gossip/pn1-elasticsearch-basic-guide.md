@@ -98,3 +98,13 @@ searchResult, err = Client.Search(index).Query(boolQuery).Size(size).TerminateAf
 ## 总结
 
 大致简单回顾了个人使用elasticsearch的一些操作。不过写的略草。不过是一带而过。希望都是针对一些比较关键的信息，能让你在软工2使用es时有一定帮助。另外在es遇到关键问题也可发issue或联系[bflameswift](https://github.com/BFlameSwift)
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Super-BUAA-2021/GinBook"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

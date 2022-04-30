@@ -24,3 +24,13 @@
 
 1. [go gin框架和springboot框架WEB接口性能对比](https://www.cnblogs.com/zhouqinxiong/p/14730217.html)
 
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Super-BUAA-2021/GinBook"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

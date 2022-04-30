@@ -187,3 +187,13 @@ PS 可在ShoudBindAndValid 中添加翻译器使其翻译成中文报错，读�
 
 1. [Go 使用validator进行后端数据校验](https://juejin.cn/post/6847902214279659533)
 2. [go validator](https://github.com/go-playground/validator)
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Super-BUAA-2021/GinBook"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

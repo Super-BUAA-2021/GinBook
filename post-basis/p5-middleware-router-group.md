@@ -82,3 +82,12 @@ func AuthRequired() gin.HandlerFunc {
 
 由此，在`	basicRouter` 路由组下设置的路由，均要通过**用户验证**后方可访问。不过用户验证的API接口`utils.ValidateToken(token)`  的具体使用，还需要在讲解jwt的使用中细说。不过原理很简单，便是对用户的个人信息，例如`uid` 或是用户名等其他信息进行加密，随后后端再进行解密出token中的信息。当然加密时应包含一段代码中不易猜得的独立信息随之加密。否则便易于破解。 具体当`Gin-demo` 完结时可参见jwt部分。
 
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Super-BUAA-2021/GinBook"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

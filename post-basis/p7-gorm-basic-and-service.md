@@ -280,3 +280,12 @@ Go项目中，本例使用Gorm进行数据库的CURD操作。而Gorm同样也是
 3. [六种操作源码](https://github.com/marmotedu/gopractise-demo/blob/master/gorm/main.go)
 
    
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Super-BUAA-2021/GinBook"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

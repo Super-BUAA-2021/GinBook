@@ -10,3 +10,13 @@
 4. 在配置文件中更改为你自己的数据库以及jwt-secret等信息。
 
 相信完成上述四步，运行main便可将此移植为你的项目了
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Super-BUAA-2021/GinBook"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
