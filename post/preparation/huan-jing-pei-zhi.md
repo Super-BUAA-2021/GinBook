@@ -106,3 +106,14 @@ func main() {
 ### 参考
 
 摘自[个人博客](https://blog.bflame.studio/2021/10/12/Introduction/Go-basic-intruduction/)
+
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Super-BUAA-2021/GinBook"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
