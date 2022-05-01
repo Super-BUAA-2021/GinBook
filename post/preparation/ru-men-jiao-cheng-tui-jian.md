@@ -14,11 +14,13 @@
 
 # 推荐项目
 
-1. [go-gin-api](https://github.com/xinliangnote/go-gin-api)
+1. [Gin官方推荐项目](https://gin-gonic.com/docs/users/)
 
-2. [gin-vue-admin](https://github.com/flipped-aurora/gin-vue-admin)
-3. 暂未开源[Phoenix-server](https://github.com/phoenix-next/phoenix-server)
-4. 学长的项目：本项目结构的最初来源。码风很好[xpertise-go](https://github.com/Coach257/xpertise-go)
+2. [go-gin-api](https://github.com/xinliangnote/go-gin-api)
+
+3. [gin-vue-admin](https://github.com/flipped-aurora/gin-vue-admin)
+4. 暂未开源[Phoenix-server](https://github.com/phoenix-next/phoenix-server)
+5. 学长的项目：本项目结构的最初来源。码风很好[xpertise-go](https://github.com/Coach257/xpertise-go)
 
 
 
