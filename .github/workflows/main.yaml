@@ -22,11 +22,11 @@ jobs:
               run: |
                   npm install gitbook-cli -g
                   gitbook -v
-                  gitbook fetch 3.0.0
+                  gitbook fetch 3.2.3
                   gitbook install
             - name: Build Gitbook
               run: |
-                  gitbook build --gitbook=3.0.0
+                  gitbook build --gitbook=3.2.3
             - name: Push to gh-pages
               run: |
                   cd ./_book
