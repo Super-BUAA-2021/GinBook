@@ -1,4 +1,4 @@
-# 入门教程推荐
+# Go入门教程推荐
 
 
 
@@ -17,17 +17,26 @@
 1. [go-gin-api](https://github.com/xinliangnote/go-gin-api)
 
 2. [gin-vue-admin](https://github.com/flipped-aurora/gin-vue-admin)
-3. [Phoenix-server](https://github.com/phoenix-next/phoenix-server)
-4. [xpertise-go](https://github.com/Coach257/xpertise-go)
+3. 暂未开源[Phoenix-server](https://github.com/phoenix-next/phoenix-server)
+4. 学长的项目：本项目结构的最初来源。码风很好[xpertise-go](https://github.com/Coach257/xpertise-go)
 
 
 
 # 博客推荐
 
-1. https://github.com/xinliangnote/Go
+1. Go-gin-api的文档 https://github.com/xinliangnote/Go
 2. https://eddycjy.com/
+3. 其他人的Ginbook https://www.topgoer.com/gin%E6%A1%86%E6%9E%B6/
 
 
+
+# 官方文档（推荐）
+
+1. 英文文档：https://gin-gonic.com/docs/quickstart/
+
+2. 中文文档：https://gin-gonic.com/zh-cn/docs/quickstart/
+
+   
 
 
 
