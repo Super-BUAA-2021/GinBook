@@ -1,6 +1,7 @@
 {
 	"title": "Summary",
 	"plugins" : [
+		"pageview-count",
 		"expandable-chapters",
 		"chapter-fold",  
 		"github-buttons",
