@@ -84,6 +84,12 @@ func AuthRequired() gin.HandlerFunc {
 
 
 
+
+
+**推荐官方文档的中间件教程**
+
+1. https://gin-gonic.com/zh-cn/docs/examples/using-middleware/
+
 <script src="https://utteranc.es/client.js"
         repo="Super-BUAA-2021/GinBook"
         issue-term="pathname"
