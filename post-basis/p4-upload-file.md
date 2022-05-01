@@ -101,6 +101,12 @@ imagePath := filepath.Join(rootPath, "resource", "image")
 
 
 
+# 推荐教程
+
+1. 官方文档 https://gin-gonic.com/zh-cn/docs/examples/upload-file/
+
+
+
 
 <script src="https://utteranc.es/client.js"
         repo="Super-BUAA-2021/GinBook"
