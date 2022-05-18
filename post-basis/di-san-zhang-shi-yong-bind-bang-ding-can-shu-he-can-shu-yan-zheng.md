@@ -187,6 +187,7 @@ PS 可在ShoudBindAndValid 中添加翻译器使其翻译成中文报错，读�
 
 1. [Go 使用validator进行后端数据校验](https://juejin.cn/post/6847902214279659533)
 2. [go validator](https://github.com/go-playground/validator)
+3. [gin的各种获取请求方式的介绍](https://blog.csdn.net/love666666shen/article/details/88901785?utm_medium=distribute.wap_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_ecpm_v1~rank_v31_ecpm-13-88901785-null-null.wap_agg_so&utm_term=PostFormValue%E8%8E%B7%E5%8F%96%E4%B8%8D%E4%BA%86int%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%80%BC%E5%90%97%20go)
 
 
 
