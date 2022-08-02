@@ -222,3 +222,5 @@ jobs:
 
 [5] [另一种Go项目自动部署方法](https://www.wangjunfeng.com.cn/2021/09/09/golang-auto-deploy/)
 
+[6] [Air配置文件详细介绍](https://www.cnblogs.com/ztshuai/p/12810375.html)
+
