@@ -31,4 +31,5 @@
 ## 番外 <a href="#post-gossip" id="post-gossip"></a>
 
 * [elasticsearch go操作简单指北](gossip/pn1-elasticsearch-basic-guide.md)
+* [利用Github Action 自动部署](post-gossip/github-action.md)
 * [如何移植Gin-demo](gossip/pn2-how-to-transplant-gin-demo.md)
