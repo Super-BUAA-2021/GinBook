@@ -123,12 +123,9 @@ $ air
 
 ### Air的配置
 
-- 安装Air
+- 安装Air（当然，linux要设置好GOPATH并添加环境变量）[3]
 
 ```yml
-# Linux
-go get -v -u github.com/cosmtrek/air
-# Windows
 go install github.com/cosmtrek/air@latest
 ```
 
@@ -148,24 +145,68 @@ go install github.com/cosmtrek/air@latest
 
 ![image-20220802235214546](img/github-action/image-20220802235214546.png)
 
-
+![image-20220803001518497](img/github-action/image-20220803001518497.png)
 
 修改为如下代码即可
 
 ```
+# Windows  
  bin = "main.exe"
  cmd = "go build -o ./main.exe ."
+# linux
+ bin = "main"
+ cmd = "go build -o ./main ."
 ```
 
 随后项目成功运行
 
 ![image-20220802235413629](img/github-action/image-20220802235413629.png)
 
-而Linux上修改大致内容相同，暂时不多赘述。
+而Linux上修改大致内容相同。
 
-剩下的内容在8.3日再写。
+而服务器Linux上的剩余工作则很简单了，相应的GithubAction执行的命令是之前的子集，具体到pull代码下来即可。由于在服务器上实现使用`air &`，则在更新代码后由Air自动执行热重启。
 
-- [ ]  air+Gihub Action
+```yaml
+name: build
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: setup
+        run: sudo apt install sshpass
+
+      - name: pull and build
+        env:
+          GO: /usr/local/go/bin/go
+
+        run: |
+          sshpass -p ${{secrets.PASSWORD}} ssh -o StrictHostKeyChecking=no root@${{secrets.IP}} "cd /opt/Project/Gin-demo; git config --global http.postBuffer 1048576000;git pull"
+
+```
+
+具体测试如下：
+
+最新提交中，我将HelloGin的代码进行修改：
+
+![image-20220803002511985](img/github-action/image-20220803002511985.png)
+
+等到workflows结束后，访问`ip:port`,发现已经部署成功。此外经过在部署前后查看进程的PID发现，的确进程PID发生了变化，可见热重启发挥了作用。
+
+![image-20220803002606531](img/github-action/image-20220803002606531.png)
+
+
+
+相比较而言，使用Air进行部署的确简单快捷。
+
+
+
+最后我在查询资料的途中，发现了[另一种自动部署方法](https://www.wangjunfeng.com.cn/2021/09/09/golang-auto-deploy/)， 读者可以自行尝试，不过个人觉得原理类似，但是配置相对Air繁琐，不顾多赘述。
 
 
 
@@ -174,3 +215,10 @@ go install github.com/cosmtrek/air@latest
 [1] [Makefile使用](https://zhuanlan.zhihu.com/p/190812851)
 
 [2] [Air 简单介绍](https://studygolang.com/articles/30962)
+
+[3] [设置GOPATH](https://blog.csdn.net/qq_15437667/article/details/80482035)
+
+[4] [Air的简单使用](https://www.jianshu.com/p/45215fe48030)
+
+[5] [另一种Go项目自动部署方法](https://www.wangjunfeng.com.cn/2021/09/09/golang-auto-deploy/)
+
