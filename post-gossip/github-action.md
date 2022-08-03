@@ -6,23 +6,33 @@ Github 针对开发者提供了很多免费的实用工具，Github Action 就�
 
 在网站开发中，后端经常需要把刚写完的内容同步至服务器端供前端测试，如果手动部署，则需要先连接服务器，然后`git pull`，再将后端运行起来。一次两次还好，多了之后会很浪费时间且比较枯燥。适当使用 Github Action 就可以把这个过程自动化，下面将介绍如何实现自动部署。
 
-而由于本人的生疏不足，因此此处介绍两种常用的方法进行自动化部署。第一种较为常见，类似[DjangoBook-GithubAction](https://super-buaa-2021.github.io/Djangobook/post/ch3/3.html) 的部署方案，另一种则是使用Go的工具Air来对Go项目进行热加载，即自动编译、重启程序，也可以达到自动部署的作用。
+而由于本人的生疏不足，因此此处介绍两种常用的方法进行自动化部署。第一种较为常见，类似[DjangoBook-GithubAction](https://super-buaa-2021.github.io/Djangobook/post/ch3/3.html)不借助外部工具的部署方案，另一种则是使用Go的工具Air来对Go项目进行热加载，即自动编译、重启程序，也可以达到自动部署的作用。
 
 
 
 
 
-
-
-
-
-##  Github Action自动部署
+#  Github Action自动部署
 
 ​	
 
 ### 准备工作
 
 事实上，Go项目（此处以一Gin项目为例）的部署，就是在服务器上关掉之前的后端服务，并重新打包`go build main.go` 并运行项目`./main &`  即可。不过在自动化部署中，需要做到登录到服务器，并执行相应命令。
+
+在Commit触发workflow之前，**首先**需要配置`Secrets`,以下关于配置Secret的操作直接摘自[Marvolo’s Djangobook](https://super-buaa-2021.github.io/Djangobook/post/ch3/3.html) 
+
+进入Github 里对应的仓库页面，点击`Settings->Secrets`（如果找不到Secrets，可能是权限不够，可以让仓库拥有者来操作）。这里存放的是这个仓库中的所需要的不对外公开的常量。点击创建新 Secrets：
+
+![image-20220119205528393](img/github-action/202201192055029.png)
+
+然后分别填入常量名和值：
+
+![image-20220803083733871](img/github-action/image-20220803083733871.png)
+
+这个时候就不能再看到这个常量的值了，只能修改或者删除。之所以这么操作，是考虑到之后仓库可能改成 public，为了避免服务器的信息泄露，于是使用了 Secrets 来做一个安全防护。关于Github Action的更具体使用可以查询官方文档或是其他关于Github Action的教程吧。
+
+
 
 个人目前的`.github/workflows/build.yml` 内容如下：
 
@@ -52,11 +62,16 @@ jobs:
 上面具体做了几件事：	
 
 1. 登录到服务器
+
 2. pull仓库
+
 3. kill之前运行的程序`make kill`
+
 4. build-and-run `make build_and_run`
 
-而将一些命令简化为`make + *`的格式，还是使用了`Makefile`，个人的配置如下：
+   
+
+不过观察可以发现，workflow中在登录到服务器后，使用了一系列make 操作。 即将一些命令简化为`make + *`的格式，还是使用了`Makefile`，个人的配置如下，有了Makefile便可在开发中节省不少力气以及加快开发进程，具体更高级的Makefile使用可以去[1]中查看。
 
 ```makefile
 BINARY_NAME=Gin-demo
@@ -97,7 +112,7 @@ lint:
 	golangci-lint run --enable-all
 ```
 
-有了Makefile便可在开发中节省不少力气以及加快开发进程，具体的Makefile使用可以去[1]中查看。
+
 
 
 
@@ -111,7 +126,7 @@ lint:
 
 
 
-## 基于Air的热加载
+# 基于Air的热加载
 
 ​	关于Air的简单介绍与使用可以参见[2]， 简单来讲，若没有使用2，当修改了代码后，需要重新编译运行才能得到更新后的程序。而使用了air后，在命令行使用`air` 便可以运行程序，并能**热更新程序**，（类似Django）
 
@@ -121,7 +136,7 @@ $ air
 
 
 
-### Air的配置
+## Air的配置
 
 - 安装Air（当然，linux要设置好GOPATH并添加环境变量）[3]
 
@@ -210,7 +225,7 @@ jobs:
 
 
 
-## 参考
+# 参考
 
 [1] [Makefile使用](https://zhuanlan.zhihu.com/p/190812851)
 
@@ -223,4 +238,6 @@ jobs:
 [5] [另一种Go项目自动部署方法](https://www.wangjunfeng.com.cn/2021/09/09/golang-auto-deploy/)
 
 [6] [Air配置文件详细介绍](https://www.cnblogs.com/ztshuai/p/12810375.html)
+
+[7] [Marvolo’s Djangobook](https://super-buaa-2021.github.io/Djangobook/post/ch3/3.html) 
 
