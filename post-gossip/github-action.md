@@ -241,3 +241,16 @@ jobs:
 
 [7] [Marvolo’s Djangobook](https://super-buaa-2021.github.io/Djangobook/post/ch3/3.html) 
 
+
+
+
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Super-BUAA-2021/GinBook"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
