@@ -196,12 +196,17 @@ jobs:
       - name: setup
         run: sudo apt install sshpass
 
-      - name: pull and build
-        env:
-          GO: /usr/local/go/bin/go
-
+      - name: pull
         run: |
           sshpass -p ${{secrets.PASSWORD}} ssh -o StrictHostKeyChecking=no root@${{secrets.IP}} "cd /opt/Project/Gin-demo; git config --global http.postBuffer 1048576000;git pull"
+
+      - name: query_backend_status
+#        查看后端运行情况
+        env:
+#          go build得到的文件名
+          PROJ_NAME: main
+        run: |
+          sshpass -p ${{secrets.PASSWORD}} ssh -o StrictHostKeyChecking=no root@${{secrets.IP}} "ps -ef | grep ${PROJ_NAME}"
 
 ```
 
@@ -222,6 +227,12 @@ jobs:
 
 
 最后我在查询资料的途中，发现了[另一种自动部署方法](https://www.wangjunfeng.com.cn/2021/09/09/golang-auto-deploy/)， 读者可以自行尝试，不过个人觉得原理类似，但是配置相对Air繁琐，不顾多赘述。
+
+
+
+
+
+
 
 
 
