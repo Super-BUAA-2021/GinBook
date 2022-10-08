@@ -32,5 +32,6 @@
 
 * [elasticsearch go操作简单指北](gossip/pn1-elasticsearch-basic-guide.md)
 * [利用Github Action 自动部署](post-gossip/github-action.md)
+* [Tools](post-gossip/tools.md)
 * [Go-1.18展望](post-gossip/foresight.md)
 * [如何移植Gin-demo](gossip/pn2-how-to-transplant-gin-demo.md)
