@@ -36,4 +36,5 @@
 
   * 版权归 BFlameSwift 所有。未经授权不得转载。
   * 使用utteranc.es评论插件，需要刷新页面一下方可使用
+  * 主要作者[ly](https://github.com/BFlameSwift)目前去考盐了，因此考盐前暂停维护哈，欢迎提pr来修改和丰富内容~
 
