@@ -115,7 +115,7 @@ if err != nil {
     	if d.Error != nil {
     		log.Fatalf("List products error: %v", d.Error)
     	}
-
+    
     	log.Printf("totalcount: %d", count)
     	for _, product := range products {
     		log.Printf("\tcode: %s, price: %d\n", product.Code, product.Price)
@@ -125,7 +125,7 @@ if err != nil {
 
     该方法可以获取到一系列的记录，根据`Offset Limit Order`来调整返回顺序等。
 
-​
+
 
 ### 模型定义
 
@@ -242,3 +242,15 @@ Go项目中，本例使用Gorm进行数据库的CURD操作。而Gorm同样也是
 1. 极客时间：Go项目开发实战：30
 2. [Gorm](https://github.com/go-gorm/gorm)
 3. [六种操作源码](https://github.com/marmotedu/gopractise-demo/blob/master/gorm/main.go)
+
+
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="Super-BUAA-2021/GinBook"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
