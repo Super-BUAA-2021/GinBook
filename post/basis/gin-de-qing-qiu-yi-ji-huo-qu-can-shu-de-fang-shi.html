@@ -1,0 +1,661 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第二章 gin的请求以及获取参数的方式 · Summary</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../post-basis/swagger-jie-shao.html" />
+    
+    
+    <link rel="prev" href="../../post-preparation/hello-gin.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"Super-BUAA-2021","repo":"GinBook","type":"star","size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    GinBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">预备篇</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../post-preparation/di-yi-zhang-gin-jie-shao.html">
+            
+                <a href="../../post-preparation/di-yi-zhang-gin-jie-shao.html">
+            
+                    
+                    第一章 Gin介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../preparation/huan-jing-pei-zhi.html">
+            
+                <a href="../preparation/huan-jing-pei-zhi.html">
+            
+                    
+                    环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../preparation/ru-men-jiao-cheng-tui-jian.html">
+            
+                <a href="../preparation/ru-men-jiao-cheng-tui-jian.html">
+            
+                    
+                    入门教程推荐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../preparation/3.html">
+            
+                <a href="../preparation/3.html">
+            
+                    
+                    Gin项目大致结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../post-preparation/hello-gin.html">
+            
+                <a href="../../post-preparation/hello-gin.html">
+            
+                    
+                    Hello,Gin!
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础篇</li>
+        
+        
+    
+        <li class="chapter active" data-level="3.1" data-path="gin-de-qing-qiu-yi-ji-huo-qu-can-shu-de-fang-shi.html">
+            
+                <a href="gin-de-qing-qiu-yi-ji-huo-qu-can-shu-de-fang-shi.html">
+            
+                    
+                    第二章 gin的请求以及获取参数的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../post-basis/swagger-jie-shao.html">
+            
+                <a href="../../post-basis/swagger-jie-shao.html">
+            
+                    
+                    Swagger 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../post-basis/di-san-zhang-shi-yong-bind-bang-ding-can-shu-he-can-shu-yan-zheng.html">
+            
+                <a href="../../post-basis/di-san-zhang-shi-yong-bind-bang-ding-can-shu-he-can-shu-yan-zheng.html">
+            
+                    
+                    第三章：使用bind绑定参数和参数验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../post-basis/p4-upload-file.html">
+            
+                <a href="../../post-basis/p4-upload-file.html">
+            
+                    
+                    第四章：gin对于文件的上传和返回
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../../post-basis/p5-middleware-router-group.html">
+            
+                <a href="../../post-basis/p5-middleware-router-group.html">
+            
+                    
+                    第五章 路由分组与中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../../post-basis/p6-middleware-log-and-logrus.html">
+            
+                <a href="../../post-basis/p6-middleware-log-and-logrus.html">
+            
+                    
+                    第六章 日志介绍以及工具推荐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../../post-basis/p7-gorm-basic-and-service.html">
+            
+                <a href="../../post-basis/p7-gorm-basic-and-service.html">
+            
+                    
+                    第七章：初识GROM使用GORM进行数据库操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../../post-basis/p8-jwt-go-use.html">
+            
+                <a href="../../post-basis/p8-jwt-go-use.html">
+            
+                    
+                    第八章 jwt-go详细教学及使用示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">进阶篇</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../post-advanced/introduction.html">
+            
+                <a href="../../post-advanced/introduction.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../post-advanced/exception-capture-processing.html">
+            
+                <a href="../../post-advanced/exception-capture-processing.html">
+            
+                    
+                    异常捕获处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../post-advanced/interface-flow-limiting-control.html">
+            
+                <a href="../../post-advanced/interface-flow-limiting-control.html">
+            
+                    
+                    接口限流控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../../post-advanced/unified-timeout-control.html">
+            
+                <a href="../../post-advanced/unified-timeout-control.html">
+            
+                    
+                    统一超时控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">番外</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../gossip/pn1-elasticsearch-basic-guide.html">
+            
+                <a href="../../gossip/pn1-elasticsearch-basic-guide.html">
+            
+                    
+                    elasticsearch go操作简单指北
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../post-gossip/github-action.html">
+            
+                <a href="../../post-gossip/github-action.html">
+            
+                    
+                    利用Github Action 自动部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../../post-gossip/tools.html">
+            
+                <a href="../../post-gossip/tools.html">
+            
+                    
+                    Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../../post-gossip/foresight.html">
+            
+                <a href="../../post-gossip/foresight.html">
+            
+                    
+                    Go-1.18展望
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../../gossip/pn2-how-to-transplant-gin-demo.html">
+            
+                <a href="../../gossip/pn2-how-to-transplant-gin-demo.html">
+            
+                    
+                    如何移植Gin-demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >第二章 gin的请求以及获取参数的方式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x7B2C;&#x4E8C;&#x7AE0;-gin&#x7684;&#x8BF7;&#x6C42;&#x4EE5;&#x53CA;&#x83B7;&#x53D6;&#x53C2;&#x6570;&#x7684;&#x65B9;&#x5F0F;"><b></b>1. &#x7B2C;&#x4E8C;&#x7AE0; gin&#x7684;&#x8BF7;&#x6C42;&#x4EE5;&#x53CA;&#x83B7;&#x53D6;&#x53C2;&#x6570;&#x7684;&#x65B9;&#x5F0F;</a></li></ul></div><a href="#&#x7B2C;&#x4E8C;&#x7AE0;-gin&#x7684;&#x8BF7;&#x6C42;&#x4EE5;&#x53CA;&#x83B7;&#x53D6;&#x53C2;&#x6570;&#x7684;&#x65B9;&#x5F0F;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x7B2C;&#x4E8C;&#x7AE0;-gin&#x7684;&#x8BF7;&#x6C42;&#x4EE5;&#x53CA;&#x83B7;&#x53D6;&#x53C2;&#x6570;&#x7684;&#x65B9;&#x5F0F;"><b>1. </b>&#x7B2C;&#x4E8C;&#x7AE0; gin&#x7684;&#x8BF7;&#x6C42;&#x4EE5;&#x53CA;&#x83B7;&#x53D6;&#x53C2;&#x6570;&#x7684;&#x65B9;&#x5F0F;</a></li></ul></div><a href="#&#x7B2C;&#x4E8C;&#x7AE0;-gin&#x7684;&#x8BF7;&#x6C42;&#x4EE5;&#x53CA;&#x83B7;&#x53D6;&#x53C2;&#x6570;&#x7684;&#x65B9;&#x5F0F;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7B2C;&#x4E8C;&#x7AE0;-gin&#x7684;&#x8BF7;&#x6C42;&#x4EE5;&#x53CA;&#x83B7;&#x53D6;&#x53C2;&#x6570;&#x7684;&#x65B9;&#x5F0F;"><a name="&#x7B2C;&#x4E8C;&#x7AE0;-gin&#x7684;&#x8BF7;&#x6C42;&#x4EE5;&#x53CA;&#x83B7;&#x53D6;&#x53C2;&#x6570;&#x7684;&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E8C;&#x7AE0;-gin&#x7684;&#x8BF7;&#x6C42;&#x4EE5;&#x53CA;&#x83B7;&#x53D6;&#x53C2;&#x6570;&#x7684;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B2C;&#x4E8C;&#x7AE0;-gin&#x7684;&#x8BF7;&#x6C42;&#x4EE5;&#x53CA;&#x83B7;&#x53D6;&#x53C2;&#x6570;&#x7684;&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E8C;&#x7AE0;-gin&#x7684;&#x8BF7;&#x6C42;&#x4EE5;&#x53CA;&#x83B7;&#x53D6;&#x53C2;&#x6570;&#x7684;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x7B2C;&#x4E8C;&#x7AE0; gin&#x7684;&#x8BF7;&#x6C42;&#x4EE5;&#x53CA;&#x83B7;&#x53D6;&#x53C2;&#x6570;&#x7684;&#x65B9;&#x5F0F;</h1>
+<p>&#x200B;    &#x4E0A;&#x4E00;&#x8282;HelloGin&#x4E2D;&#x8BF4;&#x5230;&#xFF0C;&#x6CE8;&#x518C;&#x8DEF;&#x7531;&#x540E;&#xFF0C;&#x6765;&#x9009;&#x62E9;&#x5BF9;&#x5E94;&#x8C03;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x672C;&#x5C0F;&#x8282;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x6765;&#x63A5;&#x6536;&#x5E76;&#x7B80;&#x5355;&#x5904;&#x7406;&#x524D;&#x7AEF;&#x6240;&#x9001;&#x6765;&#x7684;&#x8BF7;&#x6C42;&#x7684;&#x3002;</p>
+<p>&#x4EE5;&#x4E00;&#x7B80;&#x5355;&#x7684;&#x767B;&#x5F55;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x4E3A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-go"><span class="token keyword">func</span> <span class="token function">Login</span><span class="token punctuation">(</span>c <span class="token operator">*</span>gin<span class="token punctuation">.</span>Context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    username <span class="token operator">:=</span> c<span class="token punctuation">.</span>Request<span class="token punctuation">.</span><span class="token function">FormValue</span><span class="token punctuation">(</span><span class="token string">&quot;username&quot;</span><span class="token punctuation">)</span>
+    password <span class="token operator">:=</span> c<span class="token punctuation">.</span>Request<span class="token punctuation">.</span><span class="token function">FormValue</span><span class="token punctuation">(</span><span class="token string">&quot;password&quot;</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// &#x5904;&#x7406;&#x767B;&#x5F55;&#x4FE1;&#x606F;</span>
+
+    c<span class="token punctuation">.</span><span class="token function">JSON</span><span class="token punctuation">(</span>http<span class="token punctuation">.</span>StatusOK<span class="token punctuation">,</span> gin<span class="token punctuation">.</span>H<span class="token punctuation">{</span>
+        <span class="token string">&quot;success&quot;</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;message&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;&#x767B;&#x5F55;&#x6210;&#x529F;&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;code&quot;</span><span class="token punctuation">:</span> <span class="token number">200</span> <span class="token punctuation">,</span>
+        <span class="token string">&quot;data&quot;</span><span class="token punctuation">:</span>    <span class="token string">&quot;username:&quot;</span> <span class="token operator">+</span> username <span class="token operator">+</span> <span class="token string">&quot;password&quot;</span> <span class="token operator">+</span> password<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x9996;&#x5148;<code>c *gin.Context</code> &#x8868;&#x793A;&#x4E0A;&#x4E0B;&#x6587;&#x4FE1;&#x606F;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x524D;&#x7AEF;&#x53D1;&#x7ED9;&#x6211;&#x4EEC;&#x7684;&#x6570;&#x636E;&#x3002;&#x6B64;&#x5904;&#x4F7F;&#x7528;<code>c.Request.FormValue(&quot;username&quot;)</code> &#x6765;&#x83B7;&#x53D6;&#x524D;&#x7AEF;&#x4EE5;username&#x4E3A;key&#x7684;&#x5185;&#x5BB9;&#x5E76;&#x8F6C;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;&#x3002; &#x6B64;&#x5904;&#x4FBF;&#x53EF;&#x5E94;&#x5BF9;&#x5927;&#x591A;&#x60C5;&#x51B5;&#xFF0C;&#x540E;&#x7AEF;&#x53EF;&#x80FD;&#x8FD8;&#x4F1A;&#x6309;&#x9700;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x683C;&#x5F0F;&#x5316;&#x4E3A;&#x5176;&#x4ED6;&#x5F62;&#x5F0F;&#x4F8B;&#x5982;&#x6570;&#x7EC4;&#x3001;&#x5B57;&#x5178;&#x7B49;&#x3002;&#x5904;&#x7406;&#x5B8C;&#x6210;&#x540E;&#x4EE5;JSON&#x5F62;&#x5F0F;&#x8FD4;&#x56DE;&#x4FE1;&#x606F;&#x7ED9;&#x524D;&#x7AEF;&#x3002;</p>
+<p>&#x6B64;&#x5916;&#xFF0C;Gin&#x8FD8;&#x53EF;&#x63A5;&#x6536;&#x8DEF;&#x7531;&#x4E2D;&#x7684;&#x7279;&#x5B9A;&#x4FE1;&#x606F;&#xFF0C;&#x4F8B;&#x5982;&#x5BF9;&#x4E0B;&#x9762;&#x8FD9;&#x6761;&#x8DEF;&#x7531;&#x4FE1;&#x606F;&#x65F6;</p>
+<pre class="language-"><code class="lang-go">userRouter<span class="token punctuation">.</span><span class="token function">GET</span><span class="token punctuation">(</span><span class="token string">&quot;/:id&quot;</span><span class="token punctuation">,</span> v1<span class="token punctuation">.</span>GetUser<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x53EF;&#x5BF9;&#x5E94;&#x4F7F;&#x7528;&#x6765;&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x7684;id</p>
+<pre class="language-"><code class="lang-go">id <span class="token operator">:=</span> c<span class="token punctuation">.</span><span class="token function">Param</span><span class="token punctuation">(</span><span class="token string">&quot;id&quot;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x53EA;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x5927;&#x81F4;&#x53EF;&#x4EE5;&#x5904;&#x7406;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E86;&#x3002;&#x4E0B;&#x4E00;&#x5C0F;&#x8282;&#x5C06;&#x4F1A;&#x4ECB;&#x7ECD;&#x901A;&#x8FC7;bind&#x7ED1;&#x5B9A;&#x53C2;&#x6570;&#x6765;&#x4F7F;&#x5F97;&#x4E00;&#x884C;&#x63A5;&#x6536;&#x5230;&#x6240;&#x6709;&#x7684;&#x4FE1;&#x606F;&#x5E76;&#x8FDB;&#x884C;&#x7B80;&#x5355;&#x9A8C;&#x8BC1;&#x3002;&#x4F46;&#x662F;&#x4E00;&#x6B21;&#x53EA;&#x80FD;&#x63A5;&#x6536;&#x5230;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF08;&#x7EAF;&#x538B;&#x884C;&#x4E5F;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x597D;&#x529E;&#x6CD5;&#xFF09;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x989D;&#x5916;&#x7684;&#x5BF9;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x9A8C;&#x8BC1;&#x3002;&#x82E5;&#x53EA;&#x662F;&#x8FD9;&#x4E48;&#x7C97;&#x66B4;&#x5904;&#x7406;&#x5F80;&#x5F80;&#x4F1A;&#x5BFC;&#x81F4;api&#x63A5;&#x53E3;&#x51FD;&#x6570;&#x8FC7;&#x4E8E;&#x5197;&#x957F;&#x3002;</p>
+<p><del>&#x5426;&#x5219;&#x4FBF;&#x53EF;&#x80FD;&#x4F1A;&#x50CF;&#x6211;&#x4E00;&#x6837;&#x66FE;&#x7ECF;&#x5728;api&#x63A5;&#x53E3;&#x51FD;&#x6570;&#x4E2D;&#x5199;&#x4E0B;&#x4E86;80&#x884C;&#x63A5;&#x6536;&#x5E76;&#x9A8C;&#x8BC1;&#x53C2;&#x6570;&#x7684;&#x8822;&#x4E8B;&#x3002;&#x3002;</del></p>
+<script src="https://utteranc.es/client.js" repo="Super-BUAA-2021/GinBook" issue-term="pathname" theme="github-light" crossorigin="anonymous" async>
+</script>
+
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="https://github.com/BFlameSwift" target="_blank">BFlameSwift</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>updated</i> 2022-10-22 07:49:13 </span> </footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../../post-preparation/hello-gin.html" class="navigation navigation-prev " aria-label="Previous page: Hello,Gin!">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../post-basis/swagger-jie-shao.html" class="navigation navigation-next " aria-label="Next page: Swagger 介绍">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第二章 gin的请求以及获取参数的方式","level":"3.1","depth":1,"next":{"title":"Swagger 介绍","level":"3.2","depth":1,"path":"post-basis/swagger-jie-shao.md","ref":"post-basis/swagger-jie-shao.md","articles":[]},"previous":{"title":"Hello,Gin!","level":"2.5","depth":1,"path":"post-preparation/hello-gin.md","ref":"post-preparation/hello-gin.md","articles":[]},"dir":"ltr"},"config":{"plugins":["pageview-count","expandable-chapters","chapter-fold","github-buttons","editlink","copy-code-button","page-footer-ex","anchor-navigation-ex","expandable-chapters-small","prism","-highlight","-lunr","-search","search-pro","splitter","code","-search","search-pro","github","popup","splitter","-sharing","sharing-plus","-highlight","styles-less","toggle-chapters","ancre-navigation"],"ignores":["_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © BFlameSwift 2022","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"flow":"typescript"}},"github":{"url":"https://github.com/BFlameSwift"},"editlink":{"label":"Edit This Page","multilingual":false,"base":"https://github.com/Super-BUAA-2021/GinBook/blob/master"},"styles-less":{},"page-footer-ex":{"copyright":"By [BFlameSwift](https://github.com/BFlameSwift)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>updated</i>"},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"pageview-count":{},"github-buttons":{"buttons":[{"user":"Super-BUAA-2021","repo":"GinBook","type":"star","size":"small"}]},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Summary","gitbook":"*"},"file":{"path":"post/basis/gin-de-qing-qiu-yi-ji-huo-qu-can-shu-de-fang-shi.md","mtime":"2022-10-22T07:49:13.578Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-22T07:50:30.386Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

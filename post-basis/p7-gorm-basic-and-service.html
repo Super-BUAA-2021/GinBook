@@ -1,0 +1,823 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第七章：初识GROM使用GORM进行数据库操作 · Summary</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="p8-jwt-go-use.html" />
+    
+    
+    <link rel="prev" href="p6-middleware-log-and-logrus.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"Super-BUAA-2021","repo":"GinBook","type":"star","size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    GinBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">预备篇</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../post-preparation/di-yi-zhang-gin-jie-shao.html">
+            
+                <a href="../post-preparation/di-yi-zhang-gin-jie-shao.html">
+            
+                    
+                    第一章 Gin介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../post/preparation/huan-jing-pei-zhi.html">
+            
+                <a href="../post/preparation/huan-jing-pei-zhi.html">
+            
+                    
+                    环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../post/preparation/ru-men-jiao-cheng-tui-jian.html">
+            
+                <a href="../post/preparation/ru-men-jiao-cheng-tui-jian.html">
+            
+                    
+                    入门教程推荐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../post/preparation/3.html">
+            
+                <a href="../post/preparation/3.html">
+            
+                    
+                    Gin项目大致结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../post-preparation/hello-gin.html">
+            
+                <a href="../post-preparation/hello-gin.html">
+            
+                    
+                    Hello,Gin!
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础篇</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../post/basis/gin-de-qing-qiu-yi-ji-huo-qu-can-shu-de-fang-shi.html">
+            
+                <a href="../post/basis/gin-de-qing-qiu-yi-ji-huo-qu-can-shu-de-fang-shi.html">
+            
+                    
+                    第二章 gin的请求以及获取参数的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="swagger-jie-shao.html">
+            
+                <a href="swagger-jie-shao.html">
+            
+                    
+                    Swagger 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="di-san-zhang-shi-yong-bind-bang-ding-can-shu-he-can-shu-yan-zheng.html">
+            
+                <a href="di-san-zhang-shi-yong-bind-bang-ding-can-shu-he-can-shu-yan-zheng.html">
+            
+                    
+                    第三章：使用bind绑定参数和参数验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="p4-upload-file.html">
+            
+                <a href="p4-upload-file.html">
+            
+                    
+                    第四章：gin对于文件的上传和返回
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="p5-middleware-router-group.html">
+            
+                <a href="p5-middleware-router-group.html">
+            
+                    
+                    第五章 路由分组与中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="p6-middleware-log-and-logrus.html">
+            
+                <a href="p6-middleware-log-and-logrus.html">
+            
+                    
+                    第六章 日志介绍以及工具推荐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.7" data-path="p7-gorm-basic-and-service.html">
+            
+                <a href="p7-gorm-basic-and-service.html">
+            
+                    
+                    第七章：初识GROM使用GORM进行数据库操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="p8-jwt-go-use.html">
+            
+                <a href="p8-jwt-go-use.html">
+            
+                    
+                    第八章 jwt-go详细教学及使用示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">进阶篇</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../post-advanced/introduction.html">
+            
+                <a href="../post-advanced/introduction.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../post-advanced/exception-capture-processing.html">
+            
+                <a href="../post-advanced/exception-capture-processing.html">
+            
+                    
+                    异常捕获处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../post-advanced/interface-flow-limiting-control.html">
+            
+                <a href="../post-advanced/interface-flow-limiting-control.html">
+            
+                    
+                    接口限流控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../post-advanced/unified-timeout-control.html">
+            
+                <a href="../post-advanced/unified-timeout-control.html">
+            
+                    
+                    统一超时控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">番外</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../gossip/pn1-elasticsearch-basic-guide.html">
+            
+                <a href="../gossip/pn1-elasticsearch-basic-guide.html">
+            
+                    
+                    elasticsearch go操作简单指北
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../post-gossip/github-action.html">
+            
+                <a href="../post-gossip/github-action.html">
+            
+                    
+                    利用Github Action 自动部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../post-gossip/tools.html">
+            
+                <a href="../post-gossip/tools.html">
+            
+                    
+                    Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../post-gossip/foresight.html">
+            
+                <a href="../post-gossip/foresight.html">
+            
+                    
+                    Go-1.18展望
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../gossip/pn2-how-to-transplant-gin-demo.html">
+            
+                <a href="../gossip/pn2-how-to-transplant-gin-demo.html">
+            
+                    
+                    如何移植Gin-demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第七章：初识GROM使用GORM进行数据库操作</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x7B2C;&#x4E03;&#x7AE0;&#xFF1A;&#x521D;&#x8BC6;grom&#x4F7F;&#x7528;gorm&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;"><b></b>1. &#x7B2C;&#x4E03;&#x7AE0;&#xFF1A;&#x521D;&#x8BC6;GROM&#x4F7F;&#x7528;GORM&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7B2C;&#x4E03;&#x7AE0;&#xFF1A;&#x521D;&#x8BC6;grom&#x4F7F;&#x7528;gorm&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;_1"><b></b>1.1. &#x7B2C;&#x4E03;&#x7AE0;&#xFF1A;&#x521D;&#x8BC6;GROM&#x4F7F;&#x7528;GORM&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;</a></li><ul><li><span class="title-icon "></span><a href="#gorm&#x7684;&#x5177;&#x4F53;&#x4F7F;&#x7528;"><b></b>1.1.1. Gorm&#x7684;&#x5177;&#x4F53;&#x4F7F;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x6A21;&#x578B;&#x5B9A;&#x4E49;"><b></b>1.1.2. &#x6A21;&#x578B;&#x5B9A;&#x4E49;</a></li><li><span class="title-icon "></span><a href="#&#x9AD8;&#x7EA7;&#x67E5;&#x8BE2;"><b></b>1.1.3. &#x9AD8;&#x7EA7;&#x67E5;&#x8BE2;</a></li><li><span class="title-icon "></span><a href="#&#x539F;&#x751F;sql&#x67E5;&#x8BE2;"><b></b>1.1.4. &#x539F;&#x751F;SQL&#x67E5;&#x8BE2;</a></li><li><span class="title-icon "></span><a href="#hook"><b></b>1.1.5. Hook</a></li><li><span class="title-icon "></span><a href="#&#x4E8B;&#x52A1;&#x5904;&#x7406;"><b></b>1.1.6. &#x4E8B;&#x52A1;&#x5904;&#x7406;</a></li></ul><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b></b>1.2. &#x603B;&#x7ED3;</a></li><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;"><b></b>1.3. &#x53C2;&#x8003;</a></li></ul></ul></div><a href="#&#x7B2C;&#x4E03;&#x7AE0;&#xFF1A;&#x521D;&#x8BC6;grom&#x4F7F;&#x7528;gorm&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x7B2C;&#x4E03;&#x7AE0;&#xFF1A;&#x521D;&#x8BC6;grom&#x4F7F;&#x7528;gorm&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;"><b>1. </b>&#x7B2C;&#x4E03;&#x7AE0;&#xFF1A;&#x521D;&#x8BC6;GROM&#x4F7F;&#x7528;GORM&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7B2C;&#x4E03;&#x7AE0;&#xFF1A;&#x521D;&#x8BC6;grom&#x4F7F;&#x7528;gorm&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;_1"><b>1.1. </b>&#x7B2C;&#x4E03;&#x7AE0;&#xFF1A;&#x521D;&#x8BC6;GROM&#x4F7F;&#x7528;GORM&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;</a></li><ul><li><span class="title-icon "></span><a href="#gorm&#x7684;&#x5177;&#x4F53;&#x4F7F;&#x7528;"><b>1.1.1. </b>Gorm&#x7684;&#x5177;&#x4F53;&#x4F7F;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x6A21;&#x578B;&#x5B9A;&#x4E49;"><b>1.1.2. </b>&#x6A21;&#x578B;&#x5B9A;&#x4E49;</a></li><li><span class="title-icon "></span><a href="#&#x9AD8;&#x7EA7;&#x67E5;&#x8BE2;"><b>1.1.3. </b>&#x9AD8;&#x7EA7;&#x67E5;&#x8BE2;</a></li><li><span class="title-icon "></span><a href="#&#x539F;&#x751F;sql&#x67E5;&#x8BE2;"><b>1.1.4. </b>&#x539F;&#x751F;SQL&#x67E5;&#x8BE2;</a></li><li><span class="title-icon "></span><a href="#hook"><b>1.1.5. </b>Hook</a></li><li><span class="title-icon "></span><a href="#&#x4E8B;&#x52A1;&#x5904;&#x7406;"><b>1.1.6. </b>&#x4E8B;&#x52A1;&#x5904;&#x7406;</a></li></ul><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b>1.2. </b>&#x603B;&#x7ED3;</a></li><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;"><b>1.3. </b>&#x53C2;&#x8003;</a></li></ul></ul></div><a href="#&#x7B2C;&#x4E03;&#x7AE0;&#xFF1A;&#x521D;&#x8BC6;grom&#x4F7F;&#x7528;gorm&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7B2C;&#x4E03;&#x7AE0;&#xFF1A;&#x521D;&#x8BC6;grom&#x4F7F;&#x7528;gorm&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;"><a name="&#x7B2C;&#x4E03;&#x7AE0;&#xFF1A;&#x521D;&#x8BC6;grom&#x4F7F;&#x7528;gorm&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E03;&#x7AE0;&#xFF1A;&#x521D;&#x8BC6;grom&#x4F7F;&#x7528;gorm&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B2C;&#x4E03;&#x7AE0;&#xFF1A;&#x521D;&#x8BC6;grom&#x4F7F;&#x7528;gorm&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E03;&#x7AE0;&#xFF1A;&#x521D;&#x8BC6;grom&#x4F7F;&#x7528;gorm&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x7B2C;&#x4E03;&#x7AE0;&#xFF1A;&#x521D;&#x8BC6;GROM&#x4F7F;&#x7528;GORM&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;</h1>
+<h2 id="&#x7B2C;&#x4E03;&#x7AE0;&#xFF1A;&#x521D;&#x8BC6;grom&#x4F7F;&#x7528;gorm&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;_1"><a name="&#x7B2C;&#x4E03;&#x7AE0;&#xFF1A;&#x521D;&#x8BC6;grom&#x4F7F;&#x7528;gorm&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;_1" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E03;&#x7AE0;&#xFF1A;&#x521D;&#x8BC6;grom&#x4F7F;&#x7528;gorm&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B2C;&#x4E03;&#x7AE0;&#xFF1A;&#x521D;&#x8BC6;grom&#x4F7F;&#x7528;gorm&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;_1" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E03;&#x7AE0;&#xFF1A;&#x521D;&#x8BC6;grom&#x4F7F;&#x7528;gorm&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;_1"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x7B2C;&#x4E03;&#x7AE0;&#xFF1A;&#x521D;&#x8BC6;GROM&#x4F7F;&#x7528;GORM&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;</h2>
+<p>ORM&#xFF08;&#x5BF9;&#x8C61;&#x5173;&#x7CFB;&#x6620;&#x5C04;&#xFF09;&#x53EF;&#x4EE5;&#x5728;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x4E0E;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x5EFA;&#x7ACB;&#x6620;&#x5C04;&#xFF0C;&#x53EF;&#x4EE5;&#x60F3;&#x64CD;&#x7EB5;&#x5BF9;&#x8C61;&#x4E00;&#x6837;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x5E93;&#x3002;&#x800C;&#x5728;Go&#x4E2D;&#xFF0C;&#x6211;&#x6240;&#x6307;&#x7684;&#x6709;Gorm&#x4E0E;Beego ORM&#x4E24;&#x79CD;ORM&#x5E93;&#x7528;&#x4E00;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x5E93;&#x3002;&#x800C;&#x672C;Book&#x4E2D;&#x9009;&#x62E9;Gorm&#x3002;</p>
+<h4 id="&#x4E3A;&#x4EC0;&#x4E48;&#x9009;&#x62E9;gorm"><a name="&#x4E3A;&#x4EC0;&#x4E48;&#x9009;&#x62E9;gorm" class="anchor-navigation-ex-anchor" href="#&#x4E3A;&#x4EC0;&#x4E48;&#x9009;&#x62E9;gorm"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E3A;&#x4EC0;&#x4E48;&#x9009;&#x62E9;gorm" class="anchor-navigation-ex-anchor" href="#&#x4E3A;&#x4EC0;&#x4E48;&#x9009;&#x62E9;gorm"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E3A;&#x4EC0;&#x4E48;&#x9009;&#x62E9;Gorm</h4>
+<p>Gorm&#x662F;Go&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x6027;&#x80FD;&#x8F83;&#x597D;&#x7684;ORM&#x5E93;&#x3002;&#x5BF9;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x53CB;&#x597D;&#xFF0C;&#x529F;&#x80FD;&#x5F3A;&#x5927;&#xFF0C;&#x8C03;&#x7528;&#x65B9;&#x4FBF;&#x3002;&#x8BB8;&#x591A;&#x5927;&#x5382;&#x90FD;&#x5728;&#x4F7F;&#x7528;[1]&#x3002;</p>
+<p>&#x6B64;&#x5916;&#x8FD8;&#x6709;&#x4E00;&#x4E9B;&#x7279;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x652F;&#x6301;&#x5173;&#x8054;&#xFF08;Has one Has Many&#x2026;.)</li>
+<li>&#x652F;&#x6301;&#x9884;&#x52A0;&#x8F7D;</li>
+<li>&#x652F;&#x6301;Hook&#xFF08;&#x589E;&#x5220;&#x6539;&#x67E5;&#x524D;&#x540E;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF09;</li>
+<li>&#x652F;&#x6301;&#x4E8B;&#x52A1;&#x5904;&#x7406;&#x3002;&#xFF08;&#x5F88;&#x91CD;&#x8981;&#xFF09;</li>
+</ul>
+<p><del>&#x4E0D;&#x8FC7;&#x7531;&#x4E8E;&#x6211;&#x6CA1;&#x7528;&#x8FC7;Beego ORM&#xFF0C;&#x5C31;&#x4E0D;&#x5984;&#x81EA;&#x8BC4;&#x8BBA;&#x4E86;</del></p>
+<h4 id="gorm&#x7684;&#x5B89;&#x88C5;"><a name="gorm&#x7684;&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#gorm&#x7684;&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="gorm&#x7684;&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#gorm&#x7684;&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>Gorm&#x7684;&#x5B89;&#x88C5;</h4>
+<pre class="language-"><code>go get -u github.com/gorm.io/gorm
+</code></pre><h3 id="gorm&#x7684;&#x5177;&#x4F53;&#x4F7F;&#x7528;"><a name="gorm&#x7684;&#x5177;&#x4F53;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#gorm&#x7684;&#x5177;&#x4F53;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="gorm&#x7684;&#x5177;&#x4F53;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#gorm&#x7684;&#x5177;&#x4F53;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. Gorm&#x7684;&#x5177;&#x4F53;&#x4F7F;&#x7528;</h3>
+<h4 id="&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;"><a name="&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;</h4>
+<p>&#x7531;&#x4E8E;Mysql&#x7684;&#x666E;&#x904D;&#x6027;&#xFF0C;&#x6B64;&#x5904;&#x4EE5;Mysql&#x4E3A;&#x4F8B;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;</p>
+<p>&#x9996;&#x5148;&#x9884;&#x5B9A;&#x4E49;&#x597D;&#x7279;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#x5373;&#x53EF;&#x8FDE;&#x63A5;&#xFF0C;&#x5728;<code>Gin-demo</code> &#x4E2D;&#xFF0C;&#x4F7F;&#x7528;&#x8BFB;&#x53D6;yml&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x6765;&#x907F;&#x514D;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x6CC4;&#x9732;&#x3002;</p>
+<pre class="language-"><code class="lang-go">dsn <span class="token operator">:=</span> fmt<span class="token punctuation">.</span><span class="token function">Sprintf</span><span class="token punctuation">(</span><span class="token string">`%s:%s@tcp(%s)/%s?charset=utf8&amp;parseTime=%t&amp;loc=%s`</span><span class="token punctuation">,</span>
+        username<span class="token punctuation">,</span>
+        password<span class="token punctuation">,</span>
+        host<span class="token punctuation">,</span>
+        database<span class="token punctuation">,</span>
+        <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;Local&quot;</span><span class="token punctuation">)</span>
+    db<span class="token punctuation">,</span> err <span class="token operator">:=</span> gorm<span class="token punctuation">.</span><span class="token function">Open</span><span class="token punctuation">(</span>mysql<span class="token punctuation">.</span><span class="token function">Open</span><span class="token punctuation">(</span>dsn<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>gorm<span class="token punctuation">.</span>Config<span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+        <span class="token function">panic</span><span class="token punctuation">(</span><span class="token string">&quot;failed to connect database&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5728;&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;&#x5927;&#x81F4;&#x53EF;&#x4EE5;&#x5F52;&#x7C7B;&#x4E3A;&#x4E00;&#x4E0B;&#x516D;&#x79CD;&#x64CD;&#x4F5C;[3]</p>
+<ol>
+<li><p><strong>&#x6570;&#x636E;&#x5E93;&#x8868;&#x7ED3;&#x6784;&#x8FC1;&#x79FB;</strong></p>
+<pre class="language-"><code class="lang-go">    <span class="token comment">// 1. Auto migration for given models</span>
+    db<span class="token punctuation">.</span><span class="token function">AutoMigrate</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>Product<span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x4E0D;&#x8FC7;&#x8BE5;&#x64CD;&#x4F5C;&#x4E5F;&#x53EA;&#x80FD;&#x5BF9;&#x65B0;&#x589E;&#x7684;&#x5B57;&#x6BB5;&#x8FDB;&#x884C;&#x53D8;&#x66F4;&#x3002;&#x5374;&#x4E0D;&#x4F1A;&#x5220;&#x9664;&#x5B57;&#x6BB5;</p>
+</li>
+<li><p><strong>&#x63D2;&#x5165;&#x6570;&#x636E;</strong></p>
+<pre class="language-"><code class="lang-go"><span class="token comment">// 2. Insert the value into database</span>
+    <span class="token keyword">if</span> err <span class="token operator">:=</span> db<span class="token punctuation">.</span><span class="token function">Create</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>Product<span class="token punctuation">{</span>Code<span class="token punctuation">:</span> <span class="token string">&quot;D42&quot;</span><span class="token punctuation">,</span> Price<span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Error<span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+        log<span class="token punctuation">.</span><span class="token function">Fatalf</span><span class="token punctuation">(</span><span class="token string">&quot;Create error: %v&quot;</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">PrintProducts</span><span class="token punctuation">(</span>db<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x4F7F;&#x7528;<code>Create</code> &#x65B9;&#x6CD5;&#x521B;&#x5EFA;&#x8BB0;&#x5F55;&#xFF0C;&#x901A;&#x8FC7;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x6210;&#x529F;&#x63D2;&#x5165;&#x3002;</p>
+</li>
+<li><p><strong>&#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x6570;&#x636E;</strong></p>
+<pre class="language-"><code class="lang-go"><span class="token comment">// 3. Find first record that match given conditions</span>
+    product <span class="token operator">:=</span> <span class="token operator">&amp;</span>Product<span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">if</span> err <span class="token operator">:=</span> db<span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span><span class="token string">&quot;code= ?&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;D42&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">First</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>product<span class="token punctuation">)</span><span class="token punctuation">.</span>Error<span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+        log<span class="token punctuation">.</span><span class="token function">Fatalf</span><span class="token punctuation">(</span><span class="token string">&quot;Get product error: %v&quot;</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4F7F;&#x7528;<code>First</code>&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x7B26;&#x5408;&#x8BB0;&#x5F55;&#x7684;&#x7B2C;&#x4E00;&#x6761;&#x6570;&#x636E;&#xFF0C;&#x5C06;&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x4E8E;<code>product</code>&#x4E2D;&#x3002;</p>
+</li>
+<li><p><strong>&#x66F4;&#x65B0;&#x6570;&#x636E;&#x8868;&#x9879;</strong></p>
+<pre class="language-"><code class="lang-go"><span class="token comment">// 4. Update value in database, if the value doesn&apos;t have primary key, will insert it</span>
+    product<span class="token punctuation">.</span>Price <span class="token operator">=</span> <span class="token number">200</span>
+    <span class="token keyword">if</span> err <span class="token operator">:=</span> db<span class="token punctuation">.</span><span class="token function">Save</span><span class="token punctuation">(</span>product<span class="token punctuation">)</span><span class="token punctuation">.</span>Error<span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+        log<span class="token punctuation">.</span><span class="token function">Fatalf</span><span class="token punctuation">(</span><span class="token string">&quot;Update product error: %v&quot;</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">PrintProducts</span><span class="token punctuation">(</span>db<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x4F7F;&#x7528;<code>Save</code>&#x65B9;&#x6CD5;&#xFF0C;&#x6765;&#x628A;&#x53D8;&#x91CF;<code>product</code>&#x4E2D;&#x6240;&#x6709;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#x5B57;&#x6BB5;&#x66F4;&#x65B0;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x3002;&#x6B64;&#x5904;&#x66F4;&#x65B0;&#x4E86;<code>Price</code>&#x5E76;&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x3002;</p>
+</li>
+<li><p><strong>&#x5220;&#x9664;&#x67D0;&#x8868;&#x9879;</strong></p>
+<pre class="language-"><code class="lang-go"><span class="token comment">// 5. Delete value match given conditions</span>
+    <span class="token keyword">if</span> err <span class="token operator">:=</span> db<span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span><span class="token string">&quot;code = ?&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;D42&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Delete</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>Product<span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Error<span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+        log<span class="token punctuation">.</span><span class="token function">Fatalf</span><span class="token punctuation">(</span><span class="token string">&quot;Delete product error: %v&quot;</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">PrintProducts</span><span class="token punctuation">(</span>db<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x4F7F;&#x7528;<code>Delete</code>&#x65B9;&#x6CD5;&#xFF0C;&#x6765;&#x628A;product&#x4ECE;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x5E93;&#x8868;&#x4E2D;&#x5220;&#x9664;</p>
+<p>&#x4E0D;&#x8FC7;<code>gorm</code>&#x540C;&#x6837;&#x652F;&#x6301;&#x6279;&#x91CF;&#x5220;&#x9664;&#xFF0C;</p>
+<p><code>db.Where(&quot;name in (?)&quot;,[]string{&quot;ceshi&quot;,&quot;123&quot;}).Delete(&amp;User{})</code></p>
+</li>
+<li><p><strong>&#x83B7;&#x53D6;&#x4E00;&#x7CFB;&#x5217;&#x8868;&#x8BB0;&#x5F55;</strong></p>
+<pre class="language-"><code class="lang-go"><span class="token comment">// List products</span>
+<span class="token keyword">func</span> <span class="token function">PrintProducts</span><span class="token punctuation">(</span>db <span class="token operator">*</span>gorm<span class="token punctuation">.</span>DB<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    products <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">*</span>Product<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword">var</span> count <span class="token builtin">int64</span>
+    d <span class="token operator">:=</span> db<span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span><span class="token string">&quot;code like ?&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;%D%&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Offset</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Limit</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Order</span><span class="token punctuation">(</span><span class="token string">&quot;id desc&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>products<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Offset</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Limit</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Count</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>count<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> d<span class="token punctuation">.</span>Error <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+        log<span class="token punctuation">.</span><span class="token function">Fatalf</span><span class="token punctuation">(</span><span class="token string">&quot;List products error: %v&quot;</span><span class="token punctuation">,</span> d<span class="token punctuation">.</span>Error<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    log<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;totalcount: %d&quot;</span><span class="token punctuation">,</span> count<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> product <span class="token operator">:=</span> <span class="token keyword">range</span> products <span class="token punctuation">{</span>
+        log<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;\tcode: %s, price: %d\n&quot;</span><span class="token punctuation">,</span> product<span class="token punctuation">.</span>Code<span class="token punctuation">,</span> product<span class="token punctuation">.</span>Price<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8BE5;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5230;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x8BB0;&#x5F55;&#xFF0C;&#x6839;&#x636E;<code>Offset Limit Order</code>&#x6765;&#x8C03;&#x6574;&#x8FD4;&#x56DE;&#x987A;&#x5E8F;&#x7B49;&#x3002;</p>
+</li>
+</ol>
+<h3 id="&#x6A21;&#x578B;&#x5B9A;&#x4E49;"><a name="&#x6A21;&#x578B;&#x5B9A;&#x4E49;" class="anchor-navigation-ex-anchor" href="#&#x6A21;&#x578B;&#x5B9A;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6A21;&#x578B;&#x5B9A;&#x4E49;" class="anchor-navigation-ex-anchor" href="#&#x6A21;&#x578B;&#x5B9A;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. &#x6A21;&#x578B;&#x5B9A;&#x4E49;</h3>
+<pre class="language-"><code class="lang-go"><span class="token comment">// User &#x7528;&#x6237;</span>
+<span class="token keyword">type</span> User <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+    ID       <span class="token builtin">uint64</span>    <span class="token string">`gorm:&quot;primary_key; autoIncrement; not null;&quot; json:&quot;id&quot;`</span>
+    Name     <span class="token builtin">string</span>    <span class="token string">`gorm:&quot;size:32; not null;&quot; json:&quot;name&quot;`</span>
+    Email    <span class="token builtin">string</span>    <span class="token string">`gorm:&quot;size:32; not null; unique;&quot; json:&quot;email&quot;`</span>
+    Password <span class="token builtin">string</span>    <span class="token string">`gorm:&quot;size:128; not null;&quot; json:&quot;password&quot;`</span>
+    Avatar   <span class="token builtin">string</span>    <span class="token string">`json:&quot;avatar&quot;`</span>
+    Profile  <span class="token builtin">string</span>    <span class="token string">`gorm:&quot;size:256;&quot; json:&quot;profile&quot;`</span>
+    RegTime  time<span class="token punctuation">.</span>Time <span class="token string">`gorm:&quot;autoCreateTime&quot; json:&quot;regTime&quot;`</span>
+    UpdatedAt time<span class="token punctuation">.</span>Time <span class="token string">`gorm:&quot;autoUpdateTime; not null;&quot; json:&quot;updatedAt&quot;`</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5728;&#x6A21;&#x578B;&#x5B9A;&#x4E49;&#x540E;&#xFF0C;&#x968F;&#x540E;&#x4F7F;&#x7528;<code>db.AutoMigrate(&amp;User{})</code> &#x540E;&#x8FD0;&#x884C;&#xFF0C;&#x5373;&#x53EF;&#x5C06;&#x751F;&#x6210;&#x8868;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x3002;&#x5728;<code>Gin-demo</code> &#x9879;&#x76EE;&#x4E2D;&#x5219;&#x4F4D;&#x4E8E;<code>initialize/gorm.go</code>&#x4E2D;&#x3002;</p>
+<p>&#x6B64;&#x5904;&#x53EA;&#x662F;&#x505A;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x5B9E;&#x4F8B;&#xFF0C;&#x5E76;&#x4E0D;&#x4ECB;&#x7ECD;&#x5927;&#x591A;&#x60C5;&#x51B5;&#x3002;&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x65F6;&#x53EF;&#x53C2;&#x7167;&#x6B64;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x9879;&#x76EE;&#x4EA6;&#x6216;&#x662F;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x6765;&#x4F7F;&#x7528;&#x3002;</p>
+<h3 id="&#x9AD8;&#x7EA7;&#x67E5;&#x8BE2;"><a name="&#x9AD8;&#x7EA7;&#x67E5;&#x8BE2;" class="anchor-navigation-ex-anchor" href="#&#x9AD8;&#x7EA7;&#x67E5;&#x8BE2;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x9AD8;&#x7EA7;&#x67E5;&#x8BE2;" class="anchor-navigation-ex-anchor" href="#&#x9AD8;&#x7EA7;&#x67E5;&#x8BE2;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. &#x9AD8;&#x7EA7;&#x67E5;&#x8BE2;</h3>
+<p>&#x6B64;&#x5904;&#x4ECB;&#x7ECD;&#x56DB;&#x79CD;&#x9AD8;&#x7EA7;&#x68C0;&#x7D22;</p>
+<ol>
+<li><p>&#x5BF9;&#x68C0;&#x7D22;&#x8BB0;&#x5F55;&#x8FDB;&#x884C;&#x6392;&#x5E8F;</p>
+<pre class="language-"><code class="lang-go"><span class="token comment">// SELECT * FROM users ORDER BY age desc, name;</span>
+db<span class="token punctuation">.</span><span class="token function">Order</span><span class="token punctuation">(</span><span class="token string">&quot;age desc, name&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>users<span class="token punctuation">)</span>
+</code></pre>
+</li>
+<li><p>Limit &amp; Offset</p>
+<p>Offset &#x6307;&#x5B9A;&#x4ECE;&#x7B2C;&#x51E0;&#x6761;&#x8BB0;&#x5F55;&#x5F00;&#x59CB;&#x67E5;&#x8BE2;&#xFF0C;Limit &#x6307;&#x5B9A;&#x8FD4;&#x56DE;&#x7684;&#x6700;&#x5927;&#x8BB0;&#x5F55;&#x6570;&#x3002;Offset &#x548C; Limit &#x503C;&#x4E3A; -1 &#x65F6;&#xFF0C;&#x6D88;&#x9664; Offset &#x548C; Limit &#x6761;&#x4EF6;&#x3002;&#x53E6;&#x5916;&#xFF0C;Limit &#x548C; Offset &#x4F4D;&#x7F6E;&#x4E0D;&#x540C;&#xFF0C;&#x6548;&#x679C;&#x4E5F;&#x4E0D;&#x540C;&#x3002;</p>
+<pre class="language-"><code class="lang-go"><span class="token comment">// SELECT * FROM users OFFSET 5 LIMIT 10;</span>
+db<span class="token punctuation">.</span><span class="token function">Limit</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Offset</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>users<span class="token punctuation">)</span>
+</code></pre>
+</li>
+<li><p>Distinct &#x53EF;&#x4EE5;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x8BB0;&#x5F55;&#x4E2D;&#x9009;&#x62E9;&#x4E0D;&#x540C;&#x7684;&#x503C;&#x3002;</p>
+<pre class="language-"><code class="lang-go">db<span class="token punctuation">.</span><span class="token function">Distinct</span><span class="token punctuation">(</span><span class="token string">&quot;name&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;age&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Order</span><span class="token punctuation">(</span><span class="token string">&quot;name, age desc&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>results<span class="token punctuation">)</span>
+</code></pre>
+</li>
+<li><p>Count &#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5339;&#x914D;&#x7684;&#x6761;&#x6570;&#x3002;</p>
+<pre class="language-"><code class="lang-go"><span class="token keyword">var</span> count <span class="token builtin">int64</span>
+<span class="token comment">// SELECT count(1) FROM users WHERE name = &apos;jinzhu&apos;; (count)</span>
+db<span class="token punctuation">.</span><span class="token function">Model</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>User<span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span><span class="token string">&quot;name = ?&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;jinzhu&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Count</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>count<span class="token punctuation">)</span>
+</code></pre>
+</li>
+</ol>
+<h3 id="&#x539F;&#x751F;sql&#x67E5;&#x8BE2;"><a name="&#x539F;&#x751F;sql&#x67E5;&#x8BE2;" class="anchor-navigation-ex-anchor" href="#&#x539F;&#x751F;sql&#x67E5;&#x8BE2;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x539F;&#x751F;sql&#x67E5;&#x8BE2;" class="anchor-navigation-ex-anchor" href="#&#x539F;&#x751F;sql&#x67E5;&#x8BE2;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.4. &#x539F;&#x751F;SQL&#x67E5;&#x8BE2;</h3>
+<p>&#x57FA;&#x672C;&#x7528;&#x6CD5;&#x5982;&#x4E0B;&#xFF0C;</p>
+<pre class="language-"><code class="lang-go"><span class="token keyword">type</span> Result <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+  ID   <span class="token builtin">int</span>
+  Name <span class="token builtin">string</span>
+  Age  <span class="token builtin">int</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> result Result
+db<span class="token punctuation">.</span><span class="token function">Raw</span><span class="token punctuation">(</span><span class="token string">&quot;SELECT id, name, age FROM users WHERE name = ?&quot;</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Scan</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>result<span class="token punctuation">)</span>
+</code></pre>
+<h3 id="hook"><a name="hook" class="anchor-navigation-ex-anchor" href="#hook"><i class="fa fa-link" aria-hidden="true"></i></a><a name="hook" class="anchor-navigation-ex-anchor" href="#hook"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.5. Hook</h3>
+<p>Hook&#x5373;&#x94A9;&#x5B50;&#xFF0C;&#x4E0B;&#x9762;&#x4EE3;&#x7801;&#x4E3A;&#x5728;&#x63D2;&#x5165;&#x8BB0;&#x5F55;&#x4E4B;&#x524D;&#x7684;&#x6240;&#x6267;&#x884C;&#x7684;Hook&#xFF0C; <code>(u *User)</code> &#x8868;&#x793A;&#x5BF9;User&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x65B9;&#x6CD5;</p>
+<pre class="language-"><code class="lang-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>u <span class="token operator">*</span>User<span class="token punctuation">)</span> <span class="token function">BeforeCreate</span><span class="token punctuation">(</span>db <span class="token operator">*</span>gorm<span class="token punctuation">.</span>DB<span class="token punctuation">)</span> <span class="token punctuation">(</span>err <span class="token builtin">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  u<span class="token punctuation">.</span>UUID <span class="token operator">=</span> uuid<span class="token punctuation">.</span><span class="token function">New</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">if</span> u<span class="token punctuation">.</span>Name <span class="token operator">==</span> <span class="token string">&quot;admin&quot;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> errors<span class="token punctuation">.</span><span class="token function">New</span><span class="token punctuation">(</span><span class="token string">&quot;invalid name&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><img src="img/p7-gorm-basic-and-service/image-20220428123734901.png" alt="image-20220428123734901"></p>
+<h3 id="&#x4E8B;&#x52A1;&#x5904;&#x7406;"><a name="&#x4E8B;&#x52A1;&#x5904;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x4E8B;&#x52A1;&#x5904;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E8B;&#x52A1;&#x5904;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x4E8B;&#x52A1;&#x5904;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.6. &#x4E8B;&#x52A1;&#x5904;&#x7406;</h3>
+<p>Gorm&#x7684;&#x4E8B;&#x52A1;&#x5904;&#x7406;&#x4E5F;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x4F7F;&#x7528;<code>db.Begin()</code> &#x5F00;&#x542F;&#x4E8B;&#x52A1;&#xFF0C;&#x4F7F;&#x7528;<code>tx.Commit()</code>&#x65B9;&#x6CD5;&#x7ED3;&#x675F;&#x4E8B;&#x52A1;&#x3002;&#x5F02;&#x5E38;&#x65F6;&#x4F7F;&#x7528;<code>tx.Rollback()</code>&#x56DE;&#x6EDA;&#x3002;&#x6709;&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
+<pre class="language-"><code class="lang-go">    <span class="token comment">//&#x5F00;&#x542F;&#x4E8B;&#x52A1;</span>
+    tx <span class="token operator">:=</span> db<span class="token punctuation">.</span><span class="token function">Begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    GormUser <span class="token operator">:=</span> GormUser<span class="token punctuation">{</span>
+        Phone<span class="token punctuation">:</span>    <span class="token string">&quot;18888888888&quot;</span><span class="token punctuation">,</span>
+        Name<span class="token punctuation">:</span>     <span class="token string">&quot;Shirdon&quot;</span><span class="token punctuation">,</span>
+        Password<span class="token punctuation">:</span> <span class="token function">md5Password</span><span class="token punctuation">(</span><span class="token string">&quot;666666&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">//&#x7528;&#x6237;&#x5BC6;&#x7801;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> err <span class="token operator">:=</span> tx<span class="token punctuation">.</span><span class="token function">Create</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>GormUser<span class="token punctuation">)</span><span class="token punctuation">.</span>Error<span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+        <span class="token comment">//&#x4E8B;&#x52A1;&#x56DE;&#x6EDA;</span>
+        tx<span class="token punctuation">.</span><span class="token function">Rollback</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    db<span class="token punctuation">.</span><span class="token function">First</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>GormUser<span class="token punctuation">,</span> <span class="token string">&quot;phone = ?&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;18888888888&quot;</span><span class="token punctuation">)</span>
+    <span class="token comment">//&#x4E8B;&#x52A1;&#x63D0;&#x4EA4;</span>
+    tx<span class="token punctuation">.</span><span class="token function">Commit</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x603B;&#x7ED3;</h2>
+<p>Go&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x672C;&#x4F8B;&#x4F7F;&#x7528;Gorm&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x7684;CURD&#x64CD;&#x4F5C;&#x3002;&#x800C;Gorm&#x540C;&#x6837;&#x4E5F;&#x662F;&#x76F8;&#x5BF9;&#x975E;&#x5E38;&#x53D7;&#x6B22;&#x8FCE;&#x7684;ORM&#x6846;&#x67B6;&#x3002;&#x672C;&#x7AE0;&#x63D0;&#x4F9B;&#x4E86;Gorm&#x7684;&#x5927;&#x591A;&#x6570;&#x64CD;&#x4F5C;&#x65B9;&#x5F0F;&#x5E76;&#x5305;&#x62EC;&#x9AD8;&#x7EA7;&#x68C0;&#x7D22;&#x3001;&#x4E8B;&#x52A1;&#x5904;&#x7406;&#x3001;Hook&#x7B49;&#x3002;&#x8FD9;&#x4E09;&#x79CD;&#x64CD;&#x4F5C;&#x5728;&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x4E2D;&#x975E;&#x5E38;&#x6709;&#x7528;&#x3002;&#x4E0D;&#x8FC7;&#x82E5;&#x662F;&#x964D;&#x4F4E;&#x8981;&#x6C42;&#xFF0C;&#x53EA;&#x662F;&#x638C;&#x63E1;&#x4E86;CURD&#x57FA;&#x672C;&#x64CD;&#x4F5C;&#x5728;&#x5C0F;&#x578B;&#x540E;&#x7AEF;&#x4E0A;&#x5DF2;&#x7ECF;&#x53EF;&#x4EE5;&#x4E00;&#x8BD5;&#x4E86;&#x3002;</p>
+<h2 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x53C2;&#x8003;</h2>
+<ol>
+<li>&#x6781;&#x5BA2;&#x65F6;&#x95F4;&#xFF1A;Go&#x9879;&#x76EE;&#x5F00;&#x53D1;&#x5B9E;&#x6218;&#xFF1A;30</li>
+<li><a href="https://github.com/go-gorm/gorm" target="_blank">Gorm</a></li>
+<li><a href="https://github.com/marmotedu/gopractise-demo/blob/master/gorm/main.go" target="_blank">&#x516D;&#x79CD;&#x64CD;&#x4F5C;&#x6E90;&#x7801;</a></li>
+</ol>
+<script src="https://utteranc.es/client.js" repo="Super-BUAA-2021/GinBook" issue-term="pathname" theme="github-light" crossorigin="anonymous" async>
+</script>
+
+
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="https://github.com/BFlameSwift" target="_blank">BFlameSwift</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>updated</i> 2022-10-22 07:49:13 </span> </footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="p6-middleware-log-and-logrus.html" class="navigation navigation-prev " aria-label="Previous page: 第六章 日志介绍以及工具推荐">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="p8-jwt-go-use.html" class="navigation navigation-next " aria-label="Next page: 第八章 jwt-go详细教学及使用示例">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第七章：初识GROM使用GORM进行数据库操作","level":"3.7","depth":1,"next":{"title":"第八章 jwt-go详细教学及使用示例","level":"3.8","depth":1,"path":"post-basis/p8-jwt-go-use.md","ref":"post-basis/p8-jwt-go-use.md","articles":[]},"previous":{"title":"第六章 日志介绍以及工具推荐","level":"3.6","depth":1,"path":"post-basis/p6-middleware-log-and-logrus.md","ref":"post-basis/p6-middleware-log-and-logrus.md","articles":[]},"dir":"ltr"},"config":{"plugins":["pageview-count","expandable-chapters","chapter-fold","github-buttons","editlink","copy-code-button","page-footer-ex","anchor-navigation-ex","expandable-chapters-small","prism","-highlight","-lunr","-search","search-pro","splitter","code","-search","search-pro","github","popup","splitter","-sharing","sharing-plus","-highlight","styles-less","toggle-chapters","ancre-navigation"],"ignores":["_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © BFlameSwift 2022","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"flow":"typescript"}},"github":{"url":"https://github.com/BFlameSwift"},"editlink":{"label":"Edit This Page","multilingual":false,"base":"https://github.com/Super-BUAA-2021/GinBook/blob/master"},"styles-less":{},"page-footer-ex":{"copyright":"By [BFlameSwift](https://github.com/BFlameSwift)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>updated</i>"},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"pageview-count":{},"github-buttons":{"buttons":[{"user":"Super-BUAA-2021","repo":"GinBook","type":"star","size":"small"}]},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Summary","gitbook":"*"},"file":{"path":"post-basis/p7-gorm-basic-and-service.md","mtime":"2022-10-22T07:49:13.574Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-22T07:50:30.386Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

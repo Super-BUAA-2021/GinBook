@@ -1,0 +1,747 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第八章 jwt-go详细教学及使用示例 · Summary</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../post-advanced/introduction.html" />
+    
+    
+    <link rel="prev" href="p7-gorm-basic-and-service.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"Super-BUAA-2021","repo":"GinBook","type":"star","size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    GinBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">预备篇</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../post-preparation/di-yi-zhang-gin-jie-shao.html">
+            
+                <a href="../post-preparation/di-yi-zhang-gin-jie-shao.html">
+            
+                    
+                    第一章 Gin介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../post/preparation/huan-jing-pei-zhi.html">
+            
+                <a href="../post/preparation/huan-jing-pei-zhi.html">
+            
+                    
+                    环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../post/preparation/ru-men-jiao-cheng-tui-jian.html">
+            
+                <a href="../post/preparation/ru-men-jiao-cheng-tui-jian.html">
+            
+                    
+                    入门教程推荐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../post/preparation/3.html">
+            
+                <a href="../post/preparation/3.html">
+            
+                    
+                    Gin项目大致结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../post-preparation/hello-gin.html">
+            
+                <a href="../post-preparation/hello-gin.html">
+            
+                    
+                    Hello,Gin!
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础篇</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../post/basis/gin-de-qing-qiu-yi-ji-huo-qu-can-shu-de-fang-shi.html">
+            
+                <a href="../post/basis/gin-de-qing-qiu-yi-ji-huo-qu-can-shu-de-fang-shi.html">
+            
+                    
+                    第二章 gin的请求以及获取参数的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="swagger-jie-shao.html">
+            
+                <a href="swagger-jie-shao.html">
+            
+                    
+                    Swagger 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="di-san-zhang-shi-yong-bind-bang-ding-can-shu-he-can-shu-yan-zheng.html">
+            
+                <a href="di-san-zhang-shi-yong-bind-bang-ding-can-shu-he-can-shu-yan-zheng.html">
+            
+                    
+                    第三章：使用bind绑定参数和参数验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="p4-upload-file.html">
+            
+                <a href="p4-upload-file.html">
+            
+                    
+                    第四章：gin对于文件的上传和返回
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="p5-middleware-router-group.html">
+            
+                <a href="p5-middleware-router-group.html">
+            
+                    
+                    第五章 路由分组与中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="p6-middleware-log-and-logrus.html">
+            
+                <a href="p6-middleware-log-and-logrus.html">
+            
+                    
+                    第六章 日志介绍以及工具推荐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="p7-gorm-basic-and-service.html">
+            
+                <a href="p7-gorm-basic-and-service.html">
+            
+                    
+                    第七章：初识GROM使用GORM进行数据库操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.8" data-path="p8-jwt-go-use.html">
+            
+                <a href="p8-jwt-go-use.html">
+            
+                    
+                    第八章 jwt-go详细教学及使用示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">进阶篇</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../post-advanced/introduction.html">
+            
+                <a href="../post-advanced/introduction.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../post-advanced/exception-capture-processing.html">
+            
+                <a href="../post-advanced/exception-capture-processing.html">
+            
+                    
+                    异常捕获处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../post-advanced/interface-flow-limiting-control.html">
+            
+                <a href="../post-advanced/interface-flow-limiting-control.html">
+            
+                    
+                    接口限流控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../post-advanced/unified-timeout-control.html">
+            
+                <a href="../post-advanced/unified-timeout-control.html">
+            
+                    
+                    统一超时控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">番外</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../gossip/pn1-elasticsearch-basic-guide.html">
+            
+                <a href="../gossip/pn1-elasticsearch-basic-guide.html">
+            
+                    
+                    elasticsearch go操作简单指北
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../post-gossip/github-action.html">
+            
+                <a href="../post-gossip/github-action.html">
+            
+                    
+                    利用Github Action 自动部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../post-gossip/tools.html">
+            
+                <a href="../post-gossip/tools.html">
+            
+                    
+                    Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../post-gossip/foresight.html">
+            
+                <a href="../post-gossip/foresight.html">
+            
+                    
+                    Go-1.18展望
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../gossip/pn2-how-to-transplant-gin-demo.html">
+            
+                <a href="../gossip/pn2-how-to-transplant-gin-demo.html">
+            
+                    
+                    如何移植Gin-demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第八章 jwt-go详细教学及使用示例</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x7B2C;&#x516B;&#x7AE0;-jwt-go&#x8BE6;&#x7EC6;&#x6559;&#x5B66;&#x53CA;&#x4F7F;&#x7528;&#x793A;&#x4F8B;"><b></b>1. &#x7B2C;&#x516B;&#x7AE0; jwt-go&#x8BE6;&#x7EC6;&#x6559;&#x5B66;&#x53CA;&#x4F7F;&#x7528;&#x793A;&#x4F8B;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4EC0;&#x4E48;&#x662F;jwt"><b></b>1.1. &#x4EC0;&#x4E48;&#x662F;JWT</a></li><ul><li><span class="title-icon "></span><a href="#jwt&#x7684;&#x5B89;&#x88C5;"><b></b>1.1.1. JWT&#x7684;&#x5B89;&#x88C5;</a></li></ul><li><span class="title-icon "></span><a href="#jwt&#x7684;&#x4F7F;&#x7528;"><b></b>1.2. JWT&#x7684;&#x4F7F;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x5C06;jwt&#x5E94;&#x7528;&#x4E8E;&#x4E2D;&#x95F4;&#x4EF6;&#x4E2D;"><b></b>1.3. &#x5C06;JWT&#x5E94;&#x7528;&#x4E8E;&#x4E2D;&#x95F4;&#x4EF6;&#x4E2D;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7B80;&#x5355;&#x5B9E;&#x8DF5;"><b></b>1.3.1. &#x7B80;&#x5355;&#x5B9E;&#x8DF5;</a></li></ul><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;"><b></b>1.4. &#x53C2;&#x8003;</a></li></ul></ul></div><a href="#&#x7B2C;&#x516B;&#x7AE0;-jwt-go&#x8BE6;&#x7EC6;&#x6559;&#x5B66;&#x53CA;&#x4F7F;&#x7528;&#x793A;&#x4F8B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x7B2C;&#x516B;&#x7AE0;-jwt-go&#x8BE6;&#x7EC6;&#x6559;&#x5B66;&#x53CA;&#x4F7F;&#x7528;&#x793A;&#x4F8B;"><b>1. </b>&#x7B2C;&#x516B;&#x7AE0; jwt-go&#x8BE6;&#x7EC6;&#x6559;&#x5B66;&#x53CA;&#x4F7F;&#x7528;&#x793A;&#x4F8B;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4EC0;&#x4E48;&#x662F;jwt"><b>1.1. </b>&#x4EC0;&#x4E48;&#x662F;JWT</a></li><ul><li><span class="title-icon "></span><a href="#jwt&#x7684;&#x5B89;&#x88C5;"><b>1.1.1. </b>JWT&#x7684;&#x5B89;&#x88C5;</a></li></ul><li><span class="title-icon "></span><a href="#jwt&#x7684;&#x4F7F;&#x7528;"><b>1.2. </b>JWT&#x7684;&#x4F7F;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x5C06;jwt&#x5E94;&#x7528;&#x4E8E;&#x4E2D;&#x95F4;&#x4EF6;&#x4E2D;"><b>1.3. </b>&#x5C06;JWT&#x5E94;&#x7528;&#x4E8E;&#x4E2D;&#x95F4;&#x4EF6;&#x4E2D;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7B80;&#x5355;&#x5B9E;&#x8DF5;"><b>1.3.1. </b>&#x7B80;&#x5355;&#x5B9E;&#x8DF5;</a></li></ul><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;"><b>1.4. </b>&#x53C2;&#x8003;</a></li></ul></ul></div><a href="#&#x7B2C;&#x516B;&#x7AE0;-jwt-go&#x8BE6;&#x7EC6;&#x6559;&#x5B66;&#x53CA;&#x4F7F;&#x7528;&#x793A;&#x4F8B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7B2C;&#x516B;&#x7AE0;-jwt-go&#x8BE6;&#x7EC6;&#x6559;&#x5B66;&#x53CA;&#x4F7F;&#x7528;&#x793A;&#x4F8B;"><a name="&#x7B2C;&#x516B;&#x7AE0;-jwt-go&#x8BE6;&#x7EC6;&#x6559;&#x5B66;&#x53CA;&#x4F7F;&#x7528;&#x793A;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x516B;&#x7AE0;-jwt-go&#x8BE6;&#x7EC6;&#x6559;&#x5B66;&#x53CA;&#x4F7F;&#x7528;&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B2C;&#x516B;&#x7AE0;-jwt-go&#x8BE6;&#x7EC6;&#x6559;&#x5B66;&#x53CA;&#x4F7F;&#x7528;&#x793A;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x516B;&#x7AE0;-jwt-go&#x8BE6;&#x7EC6;&#x6559;&#x5B66;&#x53CA;&#x4F7F;&#x7528;&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x7B2C;&#x516B;&#x7AE0; jwt-go&#x8BE6;&#x7EC6;&#x6559;&#x5B66;&#x53CA;&#x4F7F;&#x7528;&#x793A;&#x4F8B;</h1>
+<p>&#x200B;    &#x5728;&#x524D;&#x9762;&#x7684;&#x5404;&#x7AE0;&#x5B66;&#x4E60;&#x4EA4;&#x6D41;&#x540E;&#xFF0C;&#x76F8;&#x4FE1;&#x4F60;&#x5DF2;&#x7ECF;&#x53EF;&#x4EE5;&#x5199;&#x51FA;&#x4E00;&#x4E2A;&#x5C0F;&#x578B;&#x540E;&#x7AEF;&#x4E86;&#xFF0C;&#x5E76;&#x5728;&#x5F00;&#x53D1;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x8FD0;&#x884C;&#x8D77;&#x6765;&#x4E86;&#x3002;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x4ECD;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x5C31;&#x662F;&#x8FD9;&#x4E9B;API&#x63A5;&#x53E3;&#x5E76;&#x6CA1;&#x6709;&#x9274;&#x6743;&#x529F;&#x80FD;&#xFF0C;&#x5373;&#x6240;&#x6709;&#x77E5;&#x9053;&#x540E;&#x7AEF;&#x5730;&#x5740;&#x7684;&#x4EBA;&#x90FD;&#x53EF;&#x4EE5;&#x8BF7;&#x6C42;&#x8BE5;&#x9879;&#x76EE;&#x7684;API&#x63A5;&#x53E3;&#x4E0E;Swagger&#x6587;&#x6863;&#x3002;&#x751A;&#x81F3;&#x53EF;&#x80FD;&#x88AB;&#x7F51;&#x7EDC;&#x7684;&#x7AEF;&#x53E3;&#x626B;&#x63CF;&#x5668;&#x6240;&#x626B;&#x63CF;&#x5230;&#x800C;&#x6EE5;&#x7528;&#x3002;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5BF9;API&#x63A5;&#x53E3;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;&#x63A7;&#x5236;&#x3002;</p>
+<p>&#x200B;    &#x4E2A;&#x4EBA;&#x6240;&#x77E5;&#x7684;API&#x8BBF;&#x95EE;&#x63A7;&#x5236;&#x6709;&#x4E24;&#x79CD;&#xFF0C;<code>OAuth2.0</code> &#x4E0E;<code>JWT</code> .&#x7531;&#x4E8E;&#x8FD9;&#x800C;&#x8FD9;&#x5B8C;&#x5168;&#x4E0D;&#x540C;&#xFF0C;&#x6B64;&#x5904;&#x8FD8;&#x662F;&#x4F7F;&#x7528;&#x66F4;&#x8F7B;&#x91CF;&#x5316;&#x7684;JWT&#x6765;&#x5B9E;&#x73B0;API&#x7684;&#x8BBF;&#x95EE;&#x63A7;&#x5236;&#x529F;&#x80FD;&#x3002;</p>
+<h2 id="&#x4EC0;&#x4E48;&#x662F;jwt"><a name="&#x4EC0;&#x4E48;&#x662F;jwt" class="anchor-navigation-ex-anchor" href="#&#x4EC0;&#x4E48;&#x662F;jwt"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4EC0;&#x4E48;&#x662F;jwt" class="anchor-navigation-ex-anchor" href="#&#x4EC0;&#x4E48;&#x662F;jwt"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x4EC0;&#x4E48;&#x662F;JWT</h2>
+<p>JWT&#xFF1A;Json Web Token&#xFF0C;&#x7528;&#x6765;&#x5728;&#x5404;&#x65B9;&#x7528;Json&#x5BF9;&#x8C61;&#x5B89;&#x5168;&#x7684;&#x4F20;&#x8F93;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x4E14;&#x7531;&#x4E8E;&#x6B64;&#x4FE1;&#x606F;&#x7ECF;&#x8FC7;&#x4E86;&#x6570;&#x5B57;&#x7B7E;&#x540D;&#xFF0C;&#x56E0;&#x6B64;&#x8BE5;&#x4FE1;&#x606F;&#x53EF;&#x4EE5;&#x88AB;&#x4FE1;&#x4EFB;&#x3002;</p>
+<p><code>JWT</code>&#x5185;&#x90E8;&#x7531;<code>.</code> &#x5206;&#x4E3A;&#x4E09;&#x90E8;&#x5206;&#xFF1A;<code>Header Payload Signature</code> &#x5206;&#x522B;&#x662F;&#x5934;&#x90E8;&#xFF0C;&#x6709;&#x6548;&#x4FE1;&#x606F;&#xFF0C;&#x7B7E;&#x540D;&#x3002;</p>
+<p>&#x200B;    &#x5934;&#x90E8;&#x4ECB;&#x7ECD;&#x4EE4;&#x724C;&#x7C7B;&#x578B;&#x4E0E;&#x4F7F;&#x7528;&#x7684;&#x7B7E;&#x540D;&#x7B97;&#x6CD5;&#x3002;&#x800C;<code>Payload</code>&#x5219;&#x662F;&#x4E00;&#x4E2A;Json&#x5BF9;&#x8C61;&#xFF0C;&#x8868;&#x793A;<code>JWT</code>&#x4E2D;&#x5B9E;&#x9645;&#x4F20;&#x8F93;&#x7684;&#x6570;&#x636E;&#x3002;&#x5728;&#x7B7E;&#x540D;&#x4E2D;&#x5219;&#x662F;&#x5BF9;&#x524D;&#x4E24;&#x4E2A;&#x90E8;&#x5206;&#x8FDB;&#x884C;&#x7684;&#x7B7E;&#x540D;&#xFF0C;&#x4ECE;&#x800C;&#x6821;&#x9A8C;&#x6D88;&#x606F;&#x5728;&#x6574;&#x4E2A;&#x8FC7;&#x7A0B;&#x4E2D;&#x662F;&#x5426;&#x88AB;&#x7BE1;&#x6539;&#xFF0C;&#x5BF9;&#x4E8E;&#x79C1;&#x94A5;&#x7B7E;&#x540D;&#x7684;&#x4EE4;&#x724C;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x9A8C;&#x8BC1;JWT&#x7684;&#x53D1;&#x9001;&#x8005;&#x662F;&#x5426;&#x662F;&#x771F;&#x5B9E;&#x8EAB;&#x4EFD;&#x3002;</p>
+<p>&#x5178;&#x578B;&#x7684;&#x8BA4;&#x8BC1;&#x8FC7;&#x7A0B;&#x5982;&#x4E0B;&#xFF0C;&#x7528;&#x6237;&#x767B;&#x5F55;&#x540E;&#xFF0C;Server&#x50CF;&#x524D;&#x7AEF;&#x53D1;&#x9001;&#x6307;&#x5B9A;tokens&#xFF0C;&#x524D;&#x7AEF;&#x5C06;&#x5176;&#x5B58;&#x50A8;&#x5728;<code>Cookie</code>&#x6216;&#x662F;<code>localstorage</code>&#x4E2D;&#x5E76;&#x5728;&#x540E;&#x7EED;&#x6BCF;&#x6B21;&#x64CD;&#x4F5C;&#x90FD;&#x643A;&#x5E26;Token&#xFF0C;Server&#x7AEF;&#x6536;&#x5230;&#x8BF7;&#x6C42;&#x540E;&#x4FBF;&#x4F1A;&#x9A8C;&#x8BC1;Token&#xFF0C;&#x8FDB;&#x884C;&#x9274;&#x6743;&#xFF0C;&#x8FDB;&#x884C;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5904;&#x7406;&#x3002;</p>
+<p><img src="img/p8-jwt-go-use/image-20220428131913329.png" alt="image-20220428131913329"></p>
+<h3 id="jwt&#x7684;&#x5B89;&#x88C5;"><a name="jwt&#x7684;&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#jwt&#x7684;&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="jwt&#x7684;&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#jwt&#x7684;&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. JWT&#x7684;&#x5B89;&#x88C5;</h3>
+<pre class="language-"><code>go get -u github.com/golang-jwt/jwt@latest
+</code></pre><h2 id="jwt&#x7684;&#x4F7F;&#x7528;"><a name="jwt&#x7684;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#jwt&#x7684;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="jwt&#x7684;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#jwt&#x7684;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. JWT&#x7684;&#x4F7F;&#x7528;</h2>
+<p>&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#x751F;&#x6210;&#x4E00;&#x4E2A;token&#xFF0C;&#x5176;&#x4E2D;jwt.StandardClaims&#x4E3A;<code>jwt-go</code>&#x4E2D;&#x9884;&#x5B9A;&#x4E49;&#x7684;&#x4E00;&#x4E9B;&#x5B57;&#x6BB5;&#xFF0C;&#x6B64;&#x5904;&#x53EA;&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#xFF0C;&#x5E76;&#x628A;&#x4F20;&#x6765;&#x7684;userid,&#x4F5C;&#x4E3A;<code>Audience</code> &#x5B58;&#x50A8;&#x3002;&#x5BF9;&#x4E0A;&#x8FF0;&#x4FE1;&#x606F;&#x4F7F;&#x7528;<code>SHA256</code>&#x52A0;&#x5BC6;&#xFF0C;&#x7D27;&#x63A5;&#x7740;&#x5229;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x914D;&#x7F6E;&#x7684;<code>server.secret</code> &#xFF0C;&#x6765;&#x4F7F;&#x7528;<code>token.SignedString</code> &#x65B9;&#x6CD5;&#x751F;&#x6210;&#x7B7E;&#x540D;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<pre class="language-"><code class="lang-go"><span class="token comment">// GenerateToken &#x751F;&#x6210;&#x4E00;&#x4E2A;token</span>
+<span class="token keyword">func</span> <span class="token function">GenerateToken</span><span class="token punctuation">(</span>id <span class="token builtin">uint64</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>signedToken <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    claims <span class="token operator">:=</span> jwt<span class="token punctuation">.</span>StandardClaims<span class="token punctuation">{</span>
+        Issuer<span class="token punctuation">:</span>   <span class="token string">&quot;demo-server&quot;</span><span class="token punctuation">,</span>
+        Audience<span class="token punctuation">:</span> strconv<span class="token punctuation">.</span><span class="token function">FormatUint</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+    token <span class="token operator">:=</span> jwt<span class="token punctuation">.</span><span class="token function">NewWithClaims</span><span class="token punctuation">(</span>jwt<span class="token punctuation">.</span>SigningMethodHS256<span class="token punctuation">,</span> claims<span class="token punctuation">)</span>
+    secret <span class="token operator">:=</span> global<span class="token punctuation">.</span>VP<span class="token punctuation">.</span><span class="token function">GetString</span><span class="token punctuation">(</span><span class="token string">&quot;server.secret&quot;</span><span class="token punctuation">)</span>
+    signedToken<span class="token punctuation">,</span> err <span class="token operator">:=</span> token<span class="token punctuation">.</span><span class="token function">SignedString</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token function">byte</span><span class="token punctuation">(</span>secret<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+        <span class="token function">panic</span><span class="token punctuation">(</span><span class="token string">&quot;GenerateToken: sign token error&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5F53;&#x7528;&#x6237;&#x767B;&#x5F55;&#x65F6;&#xFF0C;&#x5373;&#x53EF;&#x901A;&#x8FC7;&#x4E0A;&#x8FF0;&#x65B9;&#x6CD5;&#xFF0C;&#x4F20;&#x5165;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x7684;id&#x540E;&#x751F;&#x6210;&#x5BF9;&#x5E94;&#x7684;token&#x3002;&#x7531;&#x4E8E;&#x5176;&#x4E2D;&#x4F7F;&#x7528;&#x4E86;&#x79C1;&#x94A5;secret&#xFF0C;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x5B89;&#x5168;&#x6027;&#x3002;</p>
+<p>&#x5F53;&#x524D;&#x7AEF;&#x5C06;&#x83B7;&#x53D6;&#x5230;token&#x540E;&#x5728;&#x6B64;&#x53D1;&#x6765;&#x8BF7;&#x6C42;&#xFF0C;&#x540E;&#x7AEF;&#x4FBF;&#x53EF;&#x5BF9;&#x6B64;token&#x8FDB;&#x884C;&#x89E3;&#x6790;&#x9A8C;&#x8BC1;&#x3002;&#x5177;&#x4F53;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF0C;&#x89E3;&#x6790;token&#x540E;&#x83B7;&#x5F97;&#x5230;&#x67D0;&#x7528;&#x6237;&#x7684;uid&#xFF0C;&#x4ECE;&#x800C;&#x5F97;&#x5230;&#x5177;&#x4F53;&#x7684;&#x7528;&#x6237;&#x6B63;&#x5728;&#x4F7F;&#x7528;&#x3002;</p>
+<pre class="language-"><code class="lang-go"><span class="token comment">// ParseToken &#x9A8C;&#x8BC1;token&#x7684;&#x6B63;&#x786E;&#x6027;&#xFF0C;&#x6B63;&#x786E;&#x5219;&#x8FD4;&#x56DE;id</span>
+<span class="token keyword">func</span> <span class="token function">ParseToken</span><span class="token punctuation">(</span>signedToken <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>id <span class="token builtin">uint64</span><span class="token punctuation">,</span> err <span class="token builtin">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    secret <span class="token operator">:=</span> global<span class="token punctuation">.</span>VP<span class="token punctuation">.</span><span class="token function">GetString</span><span class="token punctuation">(</span><span class="token string">&quot;server.secret&quot;</span><span class="token punctuation">)</span>
+    token<span class="token punctuation">,</span> err <span class="token operator">:=</span> jwt<span class="token punctuation">.</span><span class="token function">Parse</span><span class="token punctuation">(</span>
+        signedToken<span class="token punctuation">,</span>
+        <span class="token keyword">func</span><span class="token punctuation">(</span>token <span class="token operator">*</span>jwt<span class="token punctuation">.</span>Token<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token keyword">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token builtin">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token function">byte</span><span class="token punctuation">(</span>secret<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">nil</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span>
+    <span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token operator">||</span> <span class="token operator">!</span>token<span class="token punctuation">.</span>Valid <span class="token punctuation">{</span>
+        err <span class="token operator">=</span> errors<span class="token punctuation">.</span><span class="token function">New</span><span class="token punctuation">(</span><span class="token string">&quot;token isn&apos;t valid&quot;</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
+    id<span class="token punctuation">,</span> err <span class="token operator">=</span> strconv<span class="token punctuation">.</span><span class="token function">ParseUint</span><span class="token punctuation">(</span>token<span class="token punctuation">.</span>Claims<span class="token punctuation">.</span><span class="token punctuation">(</span>jwt<span class="token punctuation">.</span>MapClaims<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&quot;aud&quot;</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token builtin">string</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">64</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+        err <span class="token operator">=</span> errors<span class="token punctuation">.</span><span class="token function">New</span><span class="token punctuation">(</span><span class="token string">&quot;token isn&apos;t valid&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x4F4D;&#x4E8E;<code>Gin-Demo/utils/auth.go</code>&#x4E2D;</p>
+<h2 id="&#x5C06;jwt&#x5E94;&#x7528;&#x4E8E;&#x4E2D;&#x95F4;&#x4EF6;&#x4E2D;"><a name="&#x5C06;jwt&#x5E94;&#x7528;&#x4E8E;&#x4E2D;&#x95F4;&#x4EF6;&#x4E2D;" class="anchor-navigation-ex-anchor" href="#&#x5C06;jwt&#x5E94;&#x7528;&#x4E8E;&#x4E2D;&#x95F4;&#x4EF6;&#x4E2D;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5C06;jwt&#x5E94;&#x7528;&#x4E8E;&#x4E2D;&#x95F4;&#x4EF6;&#x4E2D;" class="anchor-navigation-ex-anchor" href="#&#x5C06;jwt&#x5E94;&#x7528;&#x4E8E;&#x4E2D;&#x95F4;&#x4EF6;&#x4E2D;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x5C06;JWT&#x5E94;&#x7528;&#x4E8E;&#x4E2D;&#x95F4;&#x4EF6;&#x4E2D;</h2>
+<p>&#x9274;&#x6743;&#x82E5;&#x662F;&#x540E;&#x7AEF;&#x6BCF;&#x9700;&#x8981;&#x4FBF;&#x8981;&#x8C03;&#x7528;&#x4E00;&#x6B21;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x9EBB;&#x70E6;&#x7684;&#xFF0C;&#x4E3A;&#x6B64;&#x6211;&#x4EEC;&#x5C06;&#x9274;&#x6743;&#x5F15;&#x5165;&#x5230;&#x4E2D;&#x95F4;&#x4EF6;&#x4E2D;&#xFF0C;&#x5BF9;&#x7279;&#x5B9A;&#x7684;&#x7EC4;&#x8DEF;&#x7531;&#xFF08;<code>GroupRouter</code>&#xFF09;&#x5E94;&#x7528;&#x6B64;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x5373;&#x53EF;&#x5BF9;&#x8BE5;&#x7EC4;&#x8DEF;&#x7531;&#x5BF9;&#x5E94;&#x7684;API&#x63A5;&#x53E3;&#x8FDB;&#x884C;&#x9274;&#x6743;&#x3002;</p>
+<p>&#x4E0B;&#x56FE;&#x4E3A;<code>middleware/auth.go</code>&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x901A;&#x8FC7;&#x63D0;&#x53D6;gin&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x7684;&#x5934;&#x90E8;<code>x-token</code>&#x5B57;&#x6BB5;,&#x6765;&#x8FDB;&#x884C;&#x53C2;&#x6570;&#x9A8C;&#x8BC1;&#x3002;&#x82E5;&#x662F;&#x7528;&#x6237;&#x6821;&#x9A8C;&#x5931;&#x8D25;&#xFF0C;&#x5219;&#x8868;&#x793A;&#x524D;&#x7AEF;&#x7684;token&#x4E0D;&#x5408;&#x6CD5;&#x800C;&#x8FD4;&#x56DE;&#x3002;&#x89E3;&#x6790;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x5F97;&#x5230;token&#x5185;&#x90E8;&#x7684;uid&#xFF0C;&#x68C0;&#x6D4B;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x4E0D;&#x5B58;&#x5728;&#x6B64;&#x7528;&#x6237;&#xFF0C;&#x540C;&#x6837;&#x4E5F;&#x662F;&#x4E0D;&#x5408;&#x6CD5;&#x800C;&#x8FD4;&#x56DE;&#x3002;&#x6700;&#x7EC8;&#x4F7F;&#x7528;<code>c.Set(&quot;user&quot;, user)</code>&#xFF0C;&#x5C06;&#x7528;&#x6237;&#x7ED3;&#x6784;&#x4F53;&#x653E;&#x5728;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x3002;&#x4EE5;&#x4FBF;&#x540E;&#x7EED;&#x76F4;&#x63A5;&#x83B7;&#x53D6;&#x5230;&#x7528;&#x6237;&#x3002;</p>
+<pre class="language-"><code class="lang-go"><span class="token keyword">func</span> <span class="token function">AuthRequired</span><span class="token punctuation">(</span><span class="token punctuation">)</span> gin<span class="token punctuation">.</span>HandlerFunc <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">func</span><span class="token punctuation">(</span>c <span class="token operator">*</span>gin<span class="token punctuation">.</span>Context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        token <span class="token operator">:=</span> c<span class="token punctuation">.</span><span class="token function">GetHeader</span><span class="token punctuation">(</span><span class="token string">&quot;x-token&quot;</span><span class="token punctuation">)</span>
+        id<span class="token punctuation">,</span> err <span class="token operator">:=</span> utils<span class="token punctuation">.</span><span class="token function">ParseToken</span><span class="token punctuation">(</span>token<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+            c<span class="token punctuation">.</span><span class="token function">JSON</span><span class="token punctuation">(</span>http<span class="token punctuation">.</span>StatusOK<span class="token punctuation">,</span> gin<span class="token punctuation">.</span>H<span class="token punctuation">{</span><span class="token string">&quot;success&quot;</span><span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token string">&quot;message&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;&#x7528;&#x6237;&#x6821;&#x9A8C;&#x5931;&#x8D25;&quot;</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+            c<span class="token punctuation">.</span><span class="token function">Abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> user<span class="token punctuation">,</span> notFound <span class="token operator">:=</span> service<span class="token punctuation">.</span><span class="token function">GetUserByID</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span> notFound <span class="token punctuation">{</span>
+            c<span class="token punctuation">.</span><span class="token function">JSON</span><span class="token punctuation">(</span>http<span class="token punctuation">.</span>StatusOK<span class="token punctuation">,</span> gin<span class="token punctuation">.</span>H<span class="token punctuation">{</span><span class="token string">&quot;success&quot;</span><span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token string">&quot;message&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;&#x7528;&#x6237;&#x4E0D;&#x5B58;&#x5728;&quot;</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+            c<span class="token punctuation">.</span><span class="token function">Abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token string">`c.Set(&quot;user&quot;, user)`</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5728;&#x4E0A;&#x8FF0;&#x5C06;user&#x653E;&#x5165;&#x5230;&#x4E0A;&#x4E0B;&#x6587;&#x540E;&#xFF0C;&#x5373;&#x53EF;&#x901A;&#x8FC7;&#x6B64;&#x65B9;&#x6CD5;&#x5728;&#x5404;API&#x4E2D;&#x6765;&#x4E00;&#x6B65;&#x83B7;&#x53D6;&#x5230;&#x5F53;&#x524D;&#x7528;&#x6237;&#x4E86;&#x3002;</p>
+<pre class="language-"><code class="lang-go"><span class="token keyword">func</span> <span class="token function">SolveUser</span><span class="token punctuation">(</span>c <span class="token operator">*</span>gin<span class="token punctuation">.</span>Context<span class="token punctuation">)</span> database<span class="token punctuation">.</span>User <span class="token punctuation">{</span>
+    userRaw<span class="token punctuation">,</span> <span class="token boolean">_</span> <span class="token operator">:=</span> c<span class="token punctuation">.</span><span class="token function">Get</span><span class="token punctuation">(</span><span class="token string">&quot;user&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> userRaw<span class="token punctuation">.</span><span class="token punctuation">(</span>database<span class="token punctuation">.</span>User<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+user <span class="token operator">:=</span> utils<span class="token punctuation">.</span><span class="token function">SolveUser</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span>
+</code></pre>
+<h3 id="&#x7B80;&#x5355;&#x5B9E;&#x8DF5;"><a name="&#x7B80;&#x5355;&#x5B9E;&#x8DF5;" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x5355;&#x5B9E;&#x8DF5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B80;&#x5355;&#x5B9E;&#x8DF5;" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x5355;&#x5B9E;&#x8DF5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. &#x7B80;&#x5355;&#x5B9E;&#x8DF5;</h3>
+<p>&#x5728;router&#x4E2D;&#x914D;&#x7F6E;&#x8DEF;&#x7531;&#xFF0C;&#x5E76;&#x6DFB;&#x52A0;API&#xFF1A;<code>GetUser</code> &#xFF0C;&#x6D4B;&#x8BD5;&#x4E0D;&#x52A0;token&#x4EE5;&#x53CA;&#x4F7F;&#x7528;&#x6B63;&#x786E;token&#x7684;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x3002;&#x901A;&#x8FC7;&#x7ED3;&#x679C;&#x53EF;&#x77E5;&#x6D4B;&#x8BD5;&#x6210;&#x529F;</p>
+<pre class="language-"><code class="lang-go">    <span class="token comment">// &#x9664;&#x4E86;&#x767B;&#x5F55;&#x6A21;&#x5757;&#x548C;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x4E4B;&#x5916;&#xFF0C;&#x90FD;&#x9700;&#x8981;&#x8EAB;&#x4EFD;&#x8BA4;&#x8BC1;</span>
+    basicRouter <span class="token operator">:=</span> rawRouter<span class="token punctuation">.</span><span class="token function">Group</span><span class="token punctuation">(</span><span class="token string">&quot;/&quot;</span><span class="token punctuation">)</span>
+    basicRouter<span class="token punctuation">.</span><span class="token function">Use</span><span class="token punctuation">(</span>middleware<span class="token punctuation">.</span><span class="token function">AuthRequired</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// &#x7528;&#x6237;&#x6A21;&#x5757;</span>
+    userRouter <span class="token operator">:=</span> basicRouter<span class="token punctuation">.</span><span class="token function">Group</span><span class="token punctuation">(</span><span class="token string">&quot;/users&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        userRouter<span class="token punctuation">.</span><span class="token function">GET</span><span class="token punctuation">(</span><span class="token string">&quot;/:id&quot;</span><span class="token punctuation">,</span> v1<span class="token punctuation">.</span>GetUser<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token keyword">func</span> <span class="token function">GetUser</span><span class="token punctuation">(</span>c <span class="token operator">*</span>gin<span class="token punctuation">.</span>Context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// &#x83B7;&#x53D6;&#x8BF7;&#x6C42;&#x6570;&#x636E;</span>
+    id<span class="token punctuation">,</span> err <span class="token operator">:=</span> strconv<span class="token punctuation">.</span><span class="token function">ParseUint</span><span class="token punctuation">(</span>c<span class="token punctuation">.</span><span class="token function">Param</span><span class="token punctuation">(</span><span class="token string">&quot;id&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">64</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+        c<span class="token punctuation">.</span><span class="token function">JSON</span><span class="token punctuation">(</span>http<span class="token punctuation">.</span>StatusOK<span class="token punctuation">,</span> response<span class="token punctuation">.</span>GetUserA<span class="token punctuation">{</span>Success<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> Message<span class="token punctuation">:</span> <span class="token string">&quot;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x975E;&#x6CD5;&quot;</span><span class="token punctuation">,</span> Code<span class="token punctuation">:</span> <span class="token number">400</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// &#x67E5;&#x8BE2;&#x5BF9;&#x5E94;ID&#x7684;&#x7528;&#x6237;</span>
+    <span class="token keyword">if</span> user<span class="token punctuation">,</span> notFound <span class="token operator">:=</span> service<span class="token punctuation">.</span><span class="token function">GetUserByID</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span> notFound <span class="token punctuation">{</span>
+        c<span class="token punctuation">.</span><span class="token function">JSON</span><span class="token punctuation">(</span>http<span class="token punctuation">.</span>StatusOK<span class="token punctuation">,</span> response<span class="token punctuation">.</span>GetUserA<span class="token punctuation">{</span>Success<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> Message<span class="token punctuation">:</span> <span class="token string">&quot;&#x627E;&#x4E0D;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x7528;&#x6237;&quot;</span><span class="token punctuation">,</span> Code<span class="token punctuation">:</span> <span class="token number">404</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment">// &#x8FD4;&#x56DE;&#x54CD;&#x5E94;</span>
+        c<span class="token punctuation">.</span><span class="token function">JSON</span><span class="token punctuation">(</span>http<span class="token punctuation">.</span>StatusOK<span class="token punctuation">,</span> response<span class="token punctuation">.</span>GetUserA<span class="token punctuation">{</span>Success<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> Message<span class="token punctuation">:</span> <span class="token string">&quot;&#x67E5;&#x627E;&#x6210;&#x529F;&quot;</span><span class="token punctuation">,</span> Name<span class="token punctuation">:</span> user<span class="token punctuation">.</span>Name<span class="token punctuation">,</span> Code<span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><img src="img/p8-jwt-go-use/image-20220429105409772.png" alt="image-20220429105409772" style="zoom: 37%;"><img src="img/p8-jwt-go-use/image-20220429105509887.png" alt="image-20220429105509887" style="zoom:33%;"></p>
+<h2 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x53C2;&#x8003;</h2>
+<ol>
+<li>Matrix53 phoenix server</li>
+<li><a href="https://github.com/golang-jwt/jwt" target="_blank">jwt-go</a></li>
+</ol>
+<script src="https://utteranc.es/client.js" repo="Super-BUAA-2021/GinBook" issue-term="pathname" theme="github-light" crossorigin="anonymous" async>
+</script>
+
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="https://github.com/BFlameSwift" target="_blank">BFlameSwift</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>updated</i> 2022-10-22 07:49:13 </span> </footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="p7-gorm-basic-and-service.html" class="navigation navigation-prev " aria-label="Previous page: 第七章：初识GROM使用GORM进行数据库操作">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../post-advanced/introduction.html" class="navigation navigation-next " aria-label="Next page: Introduction">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第八章 jwt-go详细教学及使用示例","level":"3.8","depth":1,"next":{"title":"Introduction","level":"4.1","depth":1,"path":"post-advanced/introduction.md","ref":"post-advanced/introduction.md","articles":[]},"previous":{"title":"第七章：初识GROM使用GORM进行数据库操作","level":"3.7","depth":1,"path":"post-basis/p7-gorm-basic-and-service.md","ref":"post-basis/p7-gorm-basic-and-service.md","articles":[]},"dir":"ltr"},"config":{"plugins":["pageview-count","expandable-chapters","chapter-fold","github-buttons","editlink","copy-code-button","page-footer-ex","anchor-navigation-ex","expandable-chapters-small","prism","-highlight","-lunr","-search","search-pro","splitter","code","-search","search-pro","github","popup","splitter","-sharing","sharing-plus","-highlight","styles-less","toggle-chapters","ancre-navigation"],"ignores":["_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © BFlameSwift 2022","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"flow":"typescript"}},"github":{"url":"https://github.com/BFlameSwift"},"editlink":{"label":"Edit This Page","multilingual":false,"base":"https://github.com/Super-BUAA-2021/GinBook/blob/master"},"styles-less":{},"page-footer-ex":{"copyright":"By [BFlameSwift](https://github.com/BFlameSwift)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>updated</i>"},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"pageview-count":{},"github-buttons":{"buttons":[{"user":"Super-BUAA-2021","repo":"GinBook","type":"star","size":"small"}]},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Summary","gitbook":"*"},"file":{"path":"post-basis/p8-jwt-go-use.md","mtime":"2022-10-22T07:49:13.574Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-22T07:50:30.386Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

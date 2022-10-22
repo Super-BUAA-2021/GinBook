@@ -1,0 +1,701 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第六章 日志介绍以及工具推荐 · Summary</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="p7-gorm-basic-and-service.html" />
+    
+    
+    <link rel="prev" href="p5-middleware-router-group.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"Super-BUAA-2021","repo":"GinBook","type":"star","size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    GinBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">预备篇</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../post-preparation/di-yi-zhang-gin-jie-shao.html">
+            
+                <a href="../post-preparation/di-yi-zhang-gin-jie-shao.html">
+            
+                    
+                    第一章 Gin介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../post/preparation/huan-jing-pei-zhi.html">
+            
+                <a href="../post/preparation/huan-jing-pei-zhi.html">
+            
+                    
+                    环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../post/preparation/ru-men-jiao-cheng-tui-jian.html">
+            
+                <a href="../post/preparation/ru-men-jiao-cheng-tui-jian.html">
+            
+                    
+                    入门教程推荐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../post/preparation/3.html">
+            
+                <a href="../post/preparation/3.html">
+            
+                    
+                    Gin项目大致结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../post-preparation/hello-gin.html">
+            
+                <a href="../post-preparation/hello-gin.html">
+            
+                    
+                    Hello,Gin!
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础篇</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../post/basis/gin-de-qing-qiu-yi-ji-huo-qu-can-shu-de-fang-shi.html">
+            
+                <a href="../post/basis/gin-de-qing-qiu-yi-ji-huo-qu-can-shu-de-fang-shi.html">
+            
+                    
+                    第二章 gin的请求以及获取参数的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="swagger-jie-shao.html">
+            
+                <a href="swagger-jie-shao.html">
+            
+                    
+                    Swagger 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="di-san-zhang-shi-yong-bind-bang-ding-can-shu-he-can-shu-yan-zheng.html">
+            
+                <a href="di-san-zhang-shi-yong-bind-bang-ding-can-shu-he-can-shu-yan-zheng.html">
+            
+                    
+                    第三章：使用bind绑定参数和参数验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="p4-upload-file.html">
+            
+                <a href="p4-upload-file.html">
+            
+                    
+                    第四章：gin对于文件的上传和返回
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="p5-middleware-router-group.html">
+            
+                <a href="p5-middleware-router-group.html">
+            
+                    
+                    第五章 路由分组与中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.6" data-path="p6-middleware-log-and-logrus.html">
+            
+                <a href="p6-middleware-log-and-logrus.html">
+            
+                    
+                    第六章 日志介绍以及工具推荐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="p7-gorm-basic-and-service.html">
+            
+                <a href="p7-gorm-basic-and-service.html">
+            
+                    
+                    第七章：初识GROM使用GORM进行数据库操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="p8-jwt-go-use.html">
+            
+                <a href="p8-jwt-go-use.html">
+            
+                    
+                    第八章 jwt-go详细教学及使用示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">进阶篇</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../post-advanced/introduction.html">
+            
+                <a href="../post-advanced/introduction.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../post-advanced/exception-capture-processing.html">
+            
+                <a href="../post-advanced/exception-capture-processing.html">
+            
+                    
+                    异常捕获处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../post-advanced/interface-flow-limiting-control.html">
+            
+                <a href="../post-advanced/interface-flow-limiting-control.html">
+            
+                    
+                    接口限流控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../post-advanced/unified-timeout-control.html">
+            
+                <a href="../post-advanced/unified-timeout-control.html">
+            
+                    
+                    统一超时控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">番外</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../gossip/pn1-elasticsearch-basic-guide.html">
+            
+                <a href="../gossip/pn1-elasticsearch-basic-guide.html">
+            
+                    
+                    elasticsearch go操作简单指北
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../post-gossip/github-action.html">
+            
+                <a href="../post-gossip/github-action.html">
+            
+                    
+                    利用Github Action 自动部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../post-gossip/tools.html">
+            
+                <a href="../post-gossip/tools.html">
+            
+                    
+                    Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../post-gossip/foresight.html">
+            
+                <a href="../post-gossip/foresight.html">
+            
+                    
+                    Go-1.18展望
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../gossip/pn2-how-to-transplant-gin-demo.html">
+            
+                <a href="../gossip/pn2-how-to-transplant-gin-demo.html">
+            
+                    
+                    如何移植Gin-demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第六章 日志介绍以及工具推荐</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x7B2C;&#x516D;&#x7AE0;-&#x65E5;&#x5FD7;&#x4ECB;&#x7ECD;&#x4EE5;&#x53CA;&#x5DE5;&#x5177;&#x63A8;&#x8350;"><b></b>1. &#x7B2C;&#x516D;&#x7AE0; &#x65E5;&#x5FD7;&#x4ECB;&#x7ECD;&#x4EE5;&#x53CA;&#x5DE5;&#x5177;&#x63A8;&#x8350;</a></li><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;"><b></b>2. &#x53C2;&#x8003;</a></li></ul></div><a href="#&#x7B2C;&#x516D;&#x7AE0;-&#x65E5;&#x5FD7;&#x4ECB;&#x7ECD;&#x4EE5;&#x53CA;&#x5DE5;&#x5177;&#x63A8;&#x8350;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x7B2C;&#x516D;&#x7AE0;-&#x65E5;&#x5FD7;&#x4ECB;&#x7ECD;&#x4EE5;&#x53CA;&#x5DE5;&#x5177;&#x63A8;&#x8350;"><b>1. </b>&#x7B2C;&#x516D;&#x7AE0; &#x65E5;&#x5FD7;&#x4ECB;&#x7ECD;&#x4EE5;&#x53CA;&#x5DE5;&#x5177;&#x63A8;&#x8350;</a></li><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;"><b>2. </b>&#x53C2;&#x8003;</a></li></ul></div><a href="#&#x7B2C;&#x516D;&#x7AE0;-&#x65E5;&#x5FD7;&#x4ECB;&#x7ECD;&#x4EE5;&#x53CA;&#x5DE5;&#x5177;&#x63A8;&#x8350;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7B2C;&#x516D;&#x7AE0;-&#x65E5;&#x5FD7;&#x4ECB;&#x7ECD;&#x4EE5;&#x53CA;&#x5DE5;&#x5177;&#x63A8;&#x8350;"><a name="&#x7B2C;&#x516D;&#x7AE0;-&#x65E5;&#x5FD7;&#x4ECB;&#x7ECD;&#x4EE5;&#x53CA;&#x5DE5;&#x5177;&#x63A8;&#x8350;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x516D;&#x7AE0;-&#x65E5;&#x5FD7;&#x4ECB;&#x7ECD;&#x4EE5;&#x53CA;&#x5DE5;&#x5177;&#x63A8;&#x8350;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B2C;&#x516D;&#x7AE0;-&#x65E5;&#x5FD7;&#x4ECB;&#x7ECD;&#x4EE5;&#x53CA;&#x5DE5;&#x5177;&#x63A8;&#x8350;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x516D;&#x7AE0;-&#x65E5;&#x5FD7;&#x4ECB;&#x7ECD;&#x4EE5;&#x53CA;&#x5DE5;&#x5177;&#x63A8;&#x8350;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x7B2C;&#x516D;&#x7AE0; &#x65E5;&#x5FD7;&#x4ECB;&#x7ECD;&#x4EE5;&#x53CA;&#x5DE5;&#x5177;&#x63A8;&#x8350;</h1>
+<p>&#x5F53;&#x9879;&#x76EE;&#x90E8;&#x7F72;&#x5230;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x5F88;&#x6709;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x540E;&#x7AEF;&#x5728;&#x67D0;&#x6B21;&#x670D;&#x52A1;&#x4E2D;&#x51FA;&#x73B0;&#x4E86;&#x95EE;&#x9898;&#x3002;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x82E5;&#x4E0D;&#x662F;&#x7528;&#x6237;&#x544A;&#x77E5;&#x6050;&#x6015;&#x5F88;&#x96BE;&#x53D1;&#x73B0;&#x8FD9;&#x4E2A;&#x9519;&#x8BEF;&#x3002;&#x8FD9;&#x65F6;&#x4FBF;&#x9700;&#x8981;&#x65E5;&#x5FD7;&#x7684;&#x51FA;&#x573A;&#x4E86;&#x3002;&#x7531;&#x65E5;&#x5FD7;&#x4E3A;&#x6211;&#x4EEC;&#x8BB0;&#x4E0B;&#x8BBF;&#x95EE;&#x7684;&#x4FE1;&#x606F;&#x4EE5;&#x4F9B;&#x540E;&#x7EED;&#x8C03;&#x8BD5;&#x3002;</p>
+<p>&#x5F53;&#x7136;Gin&#x81EA;&#x5E26;&#x4E86;Logger&#x53EF;&#x4EE5;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x4E0A;&#x8F93;&#x51FA;&#x4E00;&#x4E9B;&#x8BBF;&#x95EE;&#x4EE5;&#x53CA;&#x5F02;&#x5E38;&#x8BB0;&#x5F55;&#x3002;&#x5F53;&#x8FD0;&#x884C;&#x540E;&#x4FBF;&#x540E;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#x7ED3;&#x679C;</p>
+<p><img src="img/p6-middleware-log-and-logrus/image-20220427224115121.png" alt="image-20220427224115121"></p>
+<p>&#x4F46;&#x662F;&#x5176;&#x53EA;&#x80FD;&#x663E;&#x793A;&#x5728;shell&#x4E2D;&#x5374;&#x4E0D;&#x80FD;&#x8BB0;&#x5F55;&#x4E0B;&#x6765;&#x3002;&#x800C;&#x672C;&#x4F8B;&#x4E2D;&#x5C06;&#x4F1A;&#x4F7F;&#x7528;Logrus&#x6765;&#x4F5C;&#x4E3A;&#x4E2D;&#x95F4;&#x4EF6;&#x8BB0;&#x5F55;&#x65E5;&#x5FD7;&#x3002;</p>
+<p>&#x5728;<code>middleware/logrus.go</code> &#x4E2D;&#x6DFB;&#x52A0;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x6B64;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;</p>
+<p>&#x5373;&#x5728;<code>router/router.go</code> &#x4E2D;&#x6DFB;&#x52A0;<code>r.Use(middleware.LoggerToFile())</code>  </p>
+<pre class="language-"><code class="lang-go"><span class="token keyword">func</span> <span class="token function">LoggerToFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span> gin<span class="token punctuation">.</span>HandlerFunc <span class="token punctuation">{</span>
+    logFilePath <span class="token operator">:=</span> global<span class="token punctuation">.</span>VP<span class="token punctuation">.</span><span class="token function">GetString</span><span class="token punctuation">(</span><span class="token string">&quot;root_path&quot;</span><span class="token punctuation">)</span>
+    logFileName <span class="token operator">:=</span> <span class="token string">&quot;demo.log&quot;</span>
+    <span class="token comment">//&#x65E5;&#x5FD7;&#x6587;&#x4EF6;</span>
+    fileName <span class="token operator">:=</span> path<span class="token punctuation">.</span><span class="token function">Join</span><span class="token punctuation">(</span>logFilePath<span class="token punctuation">,</span> logFileName<span class="token punctuation">)</span>
+    <span class="token comment">//&#x5199;&#x5165;&#x6587;&#x4EF6;</span>
+    src<span class="token punctuation">,</span> err <span class="token operator">:=</span> os<span class="token punctuation">.</span><span class="token function">OpenFile</span><span class="token punctuation">(</span>fileName<span class="token punctuation">,</span> os<span class="token punctuation">.</span>O_WRONLY<span class="token operator">|</span>os<span class="token punctuation">.</span>O_CREATE<span class="token operator">|</span>os<span class="token punctuation">.</span>O_APPEND<span class="token operator">|</span>os<span class="token punctuation">.</span>O_SYNC<span class="token punctuation">,</span> <span class="token number">0666</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+        fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;err&quot;</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">//&#x5B9E;&#x4F8B;&#x5316;</span>
+    logger <span class="token operator">:=</span> logrus<span class="token punctuation">.</span><span class="token function">New</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment">//&#x8BBE;&#x7F6E;&#x8F93;&#x51FA;</span>
+    logger<span class="token punctuation">.</span>Out <span class="token operator">=</span> src
+    <span class="token comment">//&#x8BBE;&#x7F6E;&#x65E5;&#x5FD7;&#x7EA7;&#x522B;</span>
+    logger<span class="token punctuation">.</span><span class="token function">SetLevel</span><span class="token punctuation">(</span>logrus<span class="token punctuation">.</span>DebugLevel<span class="token punctuation">)</span>
+    <span class="token comment">//&#x8BBE;&#x7F6E;&#x65E5;&#x5FD7;&#x683C;&#x5F0F;</span>
+       logger<span class="token punctuation">.</span><span class="token function">SetFormatter</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>logrus<span class="token punctuation">.</span>JSONFormatter<span class="token punctuation">{</span>    
+        TimestampFormat<span class="token punctuation">:</span><span class="token string">&quot;2006-01-02 15:04:05&quot;</span><span class="token punctuation">,</span>    
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token keyword">func</span><span class="token punctuation">(</span>c <span class="token operator">*</span>gin<span class="token punctuation">.</span>Context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// &#x5F00;&#x59CB;&#x65F6;&#x95F4;</span>
+        startTime <span class="token operator">:=</span> time<span class="token punctuation">.</span><span class="token function">Now</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment">// &#x5904;&#x7406;&#x8BF7;&#x6C42;</span>
+        c<span class="token punctuation">.</span><span class="token function">Next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment">// &#x7ED3;&#x675F;&#x65F6;&#x95F4;</span>
+        endTime <span class="token operator">:=</span> time<span class="token punctuation">.</span><span class="token function">Now</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment">// &#x6267;&#x884C;&#x65F6;&#x95F4;</span>
+        latencyTime <span class="token operator">:=</span> endTime<span class="token punctuation">.</span><span class="token function">Sub</span><span class="token punctuation">(</span>startTime<span class="token punctuation">)</span>
+        <span class="token comment">// &#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</span>
+        reqMethod <span class="token operator">:=</span> c<span class="token punctuation">.</span>Request<span class="token punctuation">.</span>Method
+        <span class="token comment">// &#x8BF7;&#x6C42;&#x8DEF;&#x7531;</span>
+        reqUri <span class="token operator">:=</span> c<span class="token punctuation">.</span>Request<span class="token punctuation">.</span>RequestURI
+        <span class="token comment">// &#x72B6;&#x6001;&#x7801;</span>
+        statusCode <span class="token operator">:=</span> c<span class="token punctuation">.</span>Writer<span class="token punctuation">.</span><span class="token function">Status</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment">// &#x8BF7;&#x6C42;IP</span>
+        clientIP <span class="token operator">:=</span> c<span class="token punctuation">.</span><span class="token function">ClientIP</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment">// &#x65E5;&#x5FD7;&#x683C;&#x5F0F;</span>
+        logger<span class="token punctuation">.</span><span class="token function">Infof</span><span class="token punctuation">(</span><span class="token string">&quot;| %3d | %13v | %15s | %s | %s |&quot;</span><span class="token punctuation">,</span>
+            statusCode<span class="token punctuation">,</span>
+            latencyTime<span class="token punctuation">,</span>
+            clientIP<span class="token punctuation">,</span>
+            reqMethod<span class="token punctuation">,</span>
+            reqUri<span class="token punctuation">,</span>
+        <span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// https://github.com/xinliangnote/go-gin-api</span>
+</code></pre>
+<p>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x4F7F;&#x7528;&#x8005;&#x8BFB;&#x53D6;&#x6211;&#x5C06;&#x5176;&#x6539;&#x4E3A;&#x4E86;json&#x683C;&#x5F0F;&#xFF0C;&#x968F;&#x540E;&#x8BBF;&#x95EE;swagger&#x754C;&#x9762;&#xFF0C;&#x53EF;&#x5728;<code>demo.log</code>&#x89C1;&#x5230;&#x5982;&#x4E0B;&#x65E5;&#x5FD7;</p>
+<p><img src="img/p6-middleware-log-and-logrus/image-20220427224737213.png" alt="image-20220427224737213"></p>
+<p>&#x968F;&#x540E;&#x6211;&#x53C8;&#x6839;&#x636E;&#x53C2;&#x8003;&#x5728;log&#x4E0A;&#x66F4;&#x6539;&#x4E86;&#x4E00;&#x4E9B;&#xFF0C;&#x5177;&#x4F53;&#x8BF7;&#x89C1;<code>Gin-Demo/middleware/logrus.go</code> &#x4E2D;&#x3002;</p>
+<p>&#x4E0D;&#x8FC7;&#x7531;&#x4E8E;&#x4F7F;&#x7528;&#x4E86;<code>gin.Default()</code> &#x5BFC;&#x81F4;&#x76EE;&#x524D;&#x65E0;&#x6CD5;&#x6355;&#x83B7;&#x5F02;&#x5E38;&#x653E;&#x7F6E;&#x5230;&#x65E5;&#x5FD7;&#x4E2D;&#xFF0C;&#x800C;&#x662F;&#x968F;&#x7740;&#x9ED8;&#x8BA4;Recovery&#x8F93;&#x51FA;&#x5230;&#x4E86;&#x7EC8;&#x7AEF;&#x4E0A;&#x3002;&#x540E;&#x7EED;&#x4F1A;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x4E2D;&#x95F4;&#x4EF6;&#x6355;&#x83B7;&#x5F02;&#x5E38;&#x3002;</p>
+<h1 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x53C2;&#x8003;</h1>
+<ol>
+<li><a href="https://github.com/xinliangnote/Go/blob/master/03-go-gin-api%20%5B%E6%96%87%E6%A1%A3%5D/03-%5Bgo-gin-api%5D%20%E8%B7%AF%E7%94%B1%E4%B8%AD%E9%97%B4%E4%BB%B6%20-%20%E6%97%A5%E5%BF%97%E8%AE%B0%E5%BD%95.md" target="_blank">go-gin-api-document</a></li>
+<li><a href="https://github.com/xinliangnote/go-gin-api" target="_blank">https://github.com/xinliangnote/go-gin-api</a></li>
+<li><a href="https://www.yuque.com/xinliangnote/go-gin-api/ngc3x5" target="_blank">https://www.yuque.com/xinliangnote/go-gin-api/ngc3x5</a></li>
+</ol>
+<script src="https://utteranc.es/client.js" repo="Super-BUAA-2021/GinBook" issue-term="pathname" theme="github-light" crossorigin="anonymous" async>
+</script>
+
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="https://github.com/BFlameSwift" target="_blank">BFlameSwift</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>updated</i> 2022-10-22 07:49:13 </span> </footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="p5-middleware-router-group.html" class="navigation navigation-prev " aria-label="Previous page: 第五章 路由分组与中间件">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="p7-gorm-basic-and-service.html" class="navigation navigation-next " aria-label="Next page: 第七章：初识GROM使用GORM进行数据库操作">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第六章 日志介绍以及工具推荐","level":"3.6","depth":1,"next":{"title":"第七章：初识GROM使用GORM进行数据库操作","level":"3.7","depth":1,"path":"post-basis/p7-gorm-basic-and-service.md","ref":"post-basis/p7-gorm-basic-and-service.md","articles":[]},"previous":{"title":"第五章 路由分组与中间件","level":"3.5","depth":1,"path":"post-basis/p5-middleware-router-group.md","ref":"post-basis/p5-middleware-router-group.md","articles":[]},"dir":"ltr"},"config":{"plugins":["pageview-count","expandable-chapters","chapter-fold","github-buttons","editlink","copy-code-button","page-footer-ex","anchor-navigation-ex","expandable-chapters-small","prism","-highlight","-lunr","-search","search-pro","splitter","code","-search","search-pro","github","popup","splitter","-sharing","sharing-plus","-highlight","styles-less","toggle-chapters","ancre-navigation"],"ignores":["_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © BFlameSwift 2022","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"flow":"typescript"}},"github":{"url":"https://github.com/BFlameSwift"},"editlink":{"label":"Edit This Page","multilingual":false,"base":"https://github.com/Super-BUAA-2021/GinBook/blob/master"},"styles-less":{},"page-footer-ex":{"copyright":"By [BFlameSwift](https://github.com/BFlameSwift)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>updated</i>"},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"pageview-count":{},"github-buttons":{"buttons":[{"user":"Super-BUAA-2021","repo":"GinBook","type":"star","size":"small"}]},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Summary","gitbook":"*"},"file":{"path":"post-basis/p6-middleware-log-and-logrus.md","mtime":"2022-10-22T07:49:13.574Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-22T07:50:30.386Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
